@@ -47,7 +47,6 @@ h1 {
 	
 }
 
-
 #map img {
 	margin: 5px;
 }
@@ -115,7 +114,8 @@ h1 {
 .acolumn3 img {
 	width: 250px;
 }
-		
+	
+/* drop down navigation bar with hover pseudoclass */	
 #nav {
 	height: 40px;
 	width: 960px;
@@ -204,7 +204,8 @@ h1 {
 #nav li ul li {
 	display: block;
 }
-		
+
+/* Social media banner that only appears on index.html */
 .socialbanner {
 	clear: both;
 	margin: auto;
@@ -216,6 +217,7 @@ h1 {
 	border: 1px solid blue;
 }
 
+/* Table with hours for location_contact.html */
 .hours table {
 	border-collapse: collapse;
 	width: 100%;
@@ -226,7 +228,7 @@ h1 {
 	text-align: left;
 	border: 1px solid #ddd;
 }
-
+/* Footer stays at bottom of page beneath content */
 #footer {
 	text-align: center;
 	width: 960px;
@@ -237,7 +239,7 @@ h1 {
 	color: #8D9CA4;
 	padding-top: 20px;
 }
-
+ /* Social media buttons in footer, needs icons and position needs to be aligned with copyright text */
 #footer .socialbuttons {
 	float: right;
 	height: 50px;
