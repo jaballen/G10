@@ -51,31 +51,18 @@ h1 {
 	margin: 5px;
 }
 
-/* For pages with 2 columnns */
-.bcolumn1 {
+.indexcolumn1 {
+	width: 310px;
 	float: left;
+	border: 1px solid red;
 	margin: 10px 5px 10px 5px;
-	border: 1px solid red;
-	width: 470px;
-	height: 100%;
 }
-		
-.bcolumn1 img {
-	margin: 5px;
-}
-	
-.bcolumn2 { 
-	margin: 10px 0px 10px 0px;
-	border: 1px solid red;
-	width: 470px;
-	height: 100%;
+
+.indexcolumn2 {
+	width: 620px;
 	float: left;
-}
-		
-.bcolumn2 img {
-	display: block;
-	margin-right: auto;
-	margin-left: auto;
+	border: 1px solid red;
+	margin: 10px 5px 10px 5px;
 }
 
 /* For pages with 3 columns */
@@ -115,6 +102,42 @@ h1 {
 		
 .acolumn3 img {
 	width: 250px;
+}
+
+/* For pages with 2 columnns */
+.bcolumn1 {
+	float: left;
+	margin: 10px 5px 10px 5px;
+	border: 1px solid red;
+	width: 470px;
+	height: 100%;
+}
+		
+.bcolumn1 img {
+	margin: 5px;
+}
+	
+.bcolumn2 { 
+	margin: 10px 0px 10px 0px;
+	border: 1px solid red;
+	width: 470px;
+	height: 100%;
+	float: left;
+}
+		
+.bcolumn2 img {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+/* For pages with a top or bottom row */
+.row1 {
+	width: 960px;
+}
+
+.row2 {
+	width: 960px;
 }
 	
 /* drop down navigation bar with hover pseudoclass */	
@@ -178,25 +201,18 @@ h1 {
 	font-size: 1em;
 	display: inline-block;
 	margin-right: -4px;
+	text-align: center;
 }
 
 #nav a {
 	border-bottom: none;
 }
 
-#nav > ul > li {
-	text-align: center;
-}
-
-#nav > ul > li > a {
-	padding-left: 0;
-}
-
- 
 #nav li ul {
 	position: absolute;
 	display: none;
 	width: inherit;
+	text-align: center;
 }
 
 #nav li:hover ul {
