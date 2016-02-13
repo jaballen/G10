@@ -1,12 +1,12 @@
 body {
 	margin: 0;
 	width: 960px:
-	padding: 1em;
 }
 
 p {
 	font-family: sans-serif
 }
+
 #wrapper {
 	margin: 0 auto;
 	padding: 0;
@@ -20,8 +20,8 @@ p {
 	margin-right: auto;
 	width: 960px;
 	height: 200px;
-	border: 3px solid red;
-   text-align: center;
+	border: 1px solid red;
+	text-align: center;
 	margin-top: 20px;
 	}
 
@@ -34,48 +34,76 @@ p {
 }
 
 #content { 
-	margin:auto;
-	height:100%;
+	margin: auto;
+	margin: 10px auto 10px auto;
+	height: 520px;
 	width: 960px;
-	margin-top:30px;
-	border: 3px solid blue;
+	border: 1px solid blue;
 }
-		
-.column1 {
+
+/* For pages with 2 columnns */
+.bcolumn1 {
 	float: left;
-	margin: 10px;
-	border: 2px solid red;
-	width: 320px;
+	margin: 10px 5px 10px 5px;
+	border: 1px solid red;
+	width: 470px;
 	height: 500px;
 }
 		
-.column1 img {
-	width: 200px;
+.bcolumn1 img {
+	width: 250px;
 }
 	
-.column2 { 
+.bcolumn2 { 
 	overflow: auto;
-	margin: 10px;
-	border: 2px solid red;
-	width: 320px;
-	height: 243px;
+	margin: 10px 0px 10px 0px;
+	border: 1px solid red;
+	width: 470px;
+	height: 500px;
+	float: left;
 }
 		
-.column2 img {
-	width:300px;
+.bcolumn2 img {
+	width: 250px;
 }
-		
-.column3 {
 
+/* For pages with 3 columns */
+.acolumn1 {
+	float: left;
+	margin: 10px 5px 10px 5px;
+	border: 1px solid red;
+	width: 310px;
+	height: 500px;
+}
+		
+.acolumn1 img {
+	width: 250px;
+}
+	
+.acolumn2 { 
 	overflow: auto;
-	margin: 5px;
-	border: 2px solid red;
-	width: 320px;
-	height: 243px;
+	margin: 10px 0px 10px 0px;
+	border: 1px solid red;
+	width: 310px;
+	height: 500px;
+	float: left;
+}
+		
+.acolumn2 img {
+	width: 250px;
+}
+		
+.acolumn3 { 
+	overflow: auto;
+	margin: 10px 5px 10px 5px;
+	border: 1px solid red;
+	width: 310px;
+	height: 500px;
+	float: right;
 	}
 		
-.column3 img {
-	width:300px;
+.acolumn3 img {
+	width: 250px;
 }
 		
 #nav {
@@ -101,6 +129,11 @@ p {
 	font-size: 1em;
 	line-height: 35px;
 	text-align: left;
+	border-right: 1px solid #8D9CA4;
+}
+
+#nav li:last-child {
+	border-right: none;
 }
 
 #nav a {
@@ -126,11 +159,11 @@ p {
 }
 
 #nav li {
-	width: 130px;
+	width: 159px;
 	border-bottom: none;
 	height: 50px;
 	line-height: 50px;
-	font-size: 1.4em;
+	font-size: 1em;
 	display: inline-block;
 	margin-right: -4px;
 }
@@ -164,14 +197,26 @@ p {
 		
 .socialbanner {
 	clear: both;
+	margin: auto;
+	margin-bottom: 10px;
 	text-align: center;
-	}
-		
+	width: 960px;
+	height: 150px;
+	font-size: 2em;
+	border: 1px solid blue;
+}
+
 #footer {
 	text-align: center;
 	width: 960px;
+	height: 100px;
 	margin: auto;
 	background-color: #c0fdfb;
 	color: #8D9CA4;
 	padding-top: 20px;
+}
+
+#footer .socialbuttons {
+	float: right;
+	height: 50px;
 }
