@@ -1,5 +1,6 @@
 body {
 	margin: 0;
+    background-color: #FCFBE3;
 	width: 960px:
 }
 
@@ -47,7 +48,7 @@ h1 {
 	
 }
 
-#map img {
+#map img {   
 	margin: 5px;
 }
 
