@@ -41,7 +41,34 @@ p {
 	border: 1px solid blue;
 }
 
-.column1 {
+/* For pages with 2 columnns */
+.bcolumn1 {
+	float: left;
+	margin: 10px 5px 10px 5px;
+	border: 1px solid red;
+	width: 470px;
+	height: 500px;
+}
+		
+.bcolumn1 img {
+	width: 250px;
+}
+	
+.bcolumn2 { 
+	overflow: auto;
+	margin: 10px 0px 10px 0px;
+	border: 1px solid red;
+	width: 470px;
+	height: 500px;
+	float: left;
+}
+		
+.bcolumn2 img {
+	width: 250px;
+}
+
+/* For pages with 3 columns */
+.acolumn1 {
 	float: left;
 	margin: 10px 5px 10px 5px;
 	border: 1px solid red;
@@ -49,11 +76,11 @@ p {
 	height: 500px;
 }
 		
-.column1 img {
+.acolumn1 img {
 	width: 250px;
 }
 	
-.column2 { 
+.acolumn2 { 
 	overflow: auto;
 	margin: 10px 0px 10px 0px;
 	border: 1px solid red;
@@ -62,11 +89,11 @@ p {
 	float: left;
 }
 		
-.column2 img {
+.acolumn2 img {
 	width: 250px;
 }
 		
-.column3 { 
+.acolumn3 { 
 	overflow: auto;
 	margin: 10px 5px 10px 5px;
 	border: 1px solid red;
@@ -75,7 +102,7 @@ p {
 	float: right;
 	}
 		
-.column3 img {
+.acolumn3 img {
 	width: 250px;
 }
 		
@@ -102,6 +129,11 @@ p {
 	font-size: 1em;
 	line-height: 35px;
 	text-align: left;
+	border-right: 1px solid #8D9CA4;
+}
+
+#nav li:last-child {
+	border-right: none;
 }
 
 #nav a {
@@ -127,7 +159,7 @@ p {
 }
 
 #nav li {
-	width: 160px;
+	width: 159px;
 	border-bottom: none;
 	height: 50px;
 	line-height: 50px;
