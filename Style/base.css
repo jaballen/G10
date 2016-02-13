@@ -4,7 +4,12 @@ body {
 }
 
 p {
-	font-family: sans-serif
+	font-family: sans-serif;
+	padding: 5px;
+}
+h1 {
+	font-family: sans-serif;
+	padding: 5px;
 }
 
 #wrapper {
@@ -41,6 +46,12 @@ p {
 	border: 1px solid blue;
 }
 
+
+#map img {
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
 /* For pages with 2 columnns */
 .bcolumn1 {
 	float: left;
@@ -51,7 +62,7 @@ p {
 }
 		
 .bcolumn1 img {
-	width: 250px;
+	margin: 5px;
 }
 	
 .bcolumn2 { 
@@ -206,11 +217,27 @@ p {
 	border: 1px solid blue;
 }
 
+.hours table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.hours td {
+	padding: 5px;
+	text-align: left;
+	border-bottom: 1px solid #ddd;
+}
+
+.hours td:first-child {
+	border-top: 1px solid #ddd;
+}
+
 #footer {
 	text-align: center;
 	width: 960px;
 	height: 100px;
 	margin: auto;
+	clear: both;
 	background-color: #c0fdfb;
 	color: #8D9CA4;
 	padding-top: 20px;
