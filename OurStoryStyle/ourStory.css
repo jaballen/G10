@@ -1,0 +1,202 @@
+#image1 {
+	border: 1px solid red;
+	margin-right:1375px;
+	
+}   
+#image2 {
+	border: 1px solid red;
+    margin-right:1300px;
+	
+}	
+#image3 {
+    border: 1px solid red;
+	margin-right:1225px;
+
+	
+}
+
+#ourStory {
+border: 1px solid red;
+margin-left: 500px;
+	
+}
+
+
+body {
+	border: 
+	margin: 0;
+	width: 960px:
+	padding: 1em;
+}
+
+p {
+	font-family: sans-serif
+}
+#wrapper {
+	margin: 0 auto;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+}
+		
+#header {
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
+	height: 200px;
+	border: 3px solid red;
+   text-align: center;
+	margin-top: 20px;
+	}
+
+#header img {
+	margin: 0 auto;
+	padding-top: 5px;
+	display: block;
+	width: 190px;
+	height: 190px;
+}
+
+#content { 
+	margin:auto;
+	height:100%;
+	width: 960px;
+	margin-top:30px;
+	border: 3px solid blue;
+}
+		
+.column1 {
+	float: left;
+	margin: 10px;
+	border: 2px solid red;
+	width: 320px;
+	height: 500px;
+}
+		
+.column1 img {
+	width: 200px;
+}
+	
+.column2 { 
+	overflow: auto;
+	margin: 10px;
+	border: 2px solid red;
+	width: 320px;
+	height: 243px;
+}
+		
+.column2 img {
+	width:300px;
+}
+		
+.column3 {
+
+	overflow: auto;
+	margin: 5px;
+	border: 2px solid red;
+	width: 320px;
+	height: 243px;
+	}
+		
+.column3 img {
+	width:300px;
+}
+		
+#nav {
+	height: 40px;
+	width: 960px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 5px;
+	color: #c0fdfb; 
+	font-family: sans-serif;
+}
+		
+#nav ul {
+	list-style: none;
+	background-color: #c0fdfb;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+}
+
+#nav li {
+	font-size: 1em;
+	line-height: 35px;
+	text-align: left;
+}
+
+#nav a {
+	text-decoration: none;
+	color: #8D9CA4;
+	display: block;
+	padding-left: 15px;
+	border-bottom: 1px solid #888;
+}
+
+#nav a:hover {
+	background-color: #5d737e;
+}
+
+#nav a.active {
+	background-color: #aaa;
+	color: #444;
+	cursor: default;
+}
+
+#nav li li {
+	font-size: .8em;
+}
+
+#nav li {
+	width: 130px;
+	border-bottom: none;
+	height: 50px;
+	line-height: 50px;
+	font-size: 1.4em;
+	display: inline-block;
+	margin-right: -4px;
+}
+
+#nav a {
+	border-bottom: none;
+}
+
+#nav > ul > li {
+	text-align: center;
+}
+
+#nav > ul > li > a {
+	padding-left: 0;
+}
+
+ 
+#nav li ul {
+	position: absolute;
+	display: none;
+	width: inherit;
+}
+
+#nav li:hover ul {
+	display: block;
+}
+
+#nav li ul li {
+	display: block;
+}
+		
+.socialbanner {
+	clear: both;
+	text-align: center;
+	}
+		
+#footer {
+	text-align: center;
+	width: 960px;
+	margin: auto;
+	background-color: #c0fdfb;
+	color: #8D9CA4;
+	padding-top: 20px;
+}
