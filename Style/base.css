@@ -85,10 +85,11 @@ h1 {
 	border: 1px solid red;
 	width: 310px;
 	height: 500px;
+    image-resolution: snap;
 }
 		
 .acolumn1 img {
-	width: 250px;
+	width: 225px;
 }
 	
 .acolumn2 { 
@@ -98,10 +99,11 @@ h1 {
 	width: 310px;
 	height: 500px;
 	float: left;
+    image-resolution: snap;
 }
 		
 .acolumn2 img {
-	width: 250px;
+	width: 225px;
 }
 		
 .acolumn3 { 
@@ -111,10 +113,11 @@ h1 {
 	width: 310px;
 	height: 500px;
 	float: right;
+     image-resolution: snap;
 	}
 		
 .acolumn3 img {
-	width: 250px;
+	width: 225px;
 }
 	
 /* drop down navigation bar with hover pseudoclass */	
