@@ -73,7 +73,9 @@ h1 {
 }
 		
 .bcolumn2 img {
-	width: 250px;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 /* For pages with 3 columns */
