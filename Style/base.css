@@ -39,17 +39,17 @@ h1 {
 }
 
 #content { 
+	overflow: auto;
 	margin: auto;
 	margin: 10px auto 10px auto;
-	height: 100%;
 	width: 960px;
 	border: 1px solid blue;
+	
 }
 
 
 #map img {
-	margin-right: 5px;
-	margin-left: 5px;
+	margin: 5px;
 }
 
 /* For pages with 2 columnns */
