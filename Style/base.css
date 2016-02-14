@@ -13,14 +13,15 @@ p {
 }
 h1 {
 	font-family: sans-serif;
+	font-size:170%;
 	padding: 5px;
 }
 
 h2{
   font-family: sans-serif;
 	text-align: center;
-    padding-top: 200px;
-    padding-bottom: 500px;
+    /*padding-top: 200px;
+    padding-bottom: 500px;*/
 }
 
 #wrapper {
@@ -150,6 +151,17 @@ h2{
 	border: 1px solid red;
 }
 
+.row1 h2 {
+	text-align:left;
+	padding-left:10px;
+	font-size:135%;
+}
+
+.row1 p {
+	padding-left:25px;
+	font-size:150%;
+}
+
 .row2 {
 	width: 950px;
 	border: 1px solid red;
@@ -187,17 +199,16 @@ h2{
 }
 		
 #nav ul {
-	list-style: none;
-	background-color: #c0fdfb;
-	text-align: center;
+	list-style-type: none;
+	background-color: #c0fdfb;	
 	padding: 0;
-	margin: 0;
+	margin-top: 0;
 }
 
 #nav li {
 	font-size: 1em;
 	line-height: 35px;
-	text-align: left;
+	text-align: center;
 	border-right: 1px solid #8D9CA4;
 }
 
@@ -209,7 +220,7 @@ h2{
 	text-decoration: none;
 	color: #8D9CA4;
 	display: block;
-	padding-left: 15px;
+	padding-left: 0px;
 	border-bottom: 1px solid #888;
 }
 
@@ -282,6 +293,25 @@ input[type=submit] {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+}
+
+#singleform {
+	float:none;
+	margin:auto;
+	margin-top:30px;
+}
+
+table {
+	font-family: sans-serif;
+	margin-left:25px;
+}
+
+table th, td {
+	padding:5px;
+}
+
+.ordernumber {
+	margin-left:30px;
 }
 
 /* Social media banner that only appears on index.html */
