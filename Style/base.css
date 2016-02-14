@@ -1,8 +1,7 @@
-
 body {
 	margin: 0;
 	padding: 0;
-    background-color: #fafbf5;
+    background-color: #FCFFFD;
 	width: 960px:
 }
 
@@ -36,7 +35,6 @@ h2{
 	margin-right: auto;
 	width: 960px;
 	height: 200px;
-	border: 1px solid red;
 	text-align: center;
 	margin-top: 20px;
 	position: relative;
@@ -58,7 +56,6 @@ h2{
 	margin: auto;
 	margin: 10px auto 10px auto;
 	width: 960px;
-	border: 1px solid blue;
 	
 }
 
@@ -66,26 +63,44 @@ h2{
 	margin: 5px;
 }
 
- 
+/* Index page columns */
 .indexcolumn1 {
 	width: 310px;
 	float: left;
-	border: 1px solid red;
 	margin: 10px 5px 10px 5px;
 }
 
+.indexcolumn1 img {
+	width: 100%;
+	height: 100%;
+}
+
 .indexcolumn2 {
-	width: 620px;
+	width: 310px;
 	float: left;
-	border: 1px solid red;
 	margin: 10px 5px 10px 5px;
+}
+
+.indexcolumn2 img {
+	width: 100%;
+	height: 100%;
+}
+
+.indexcolumn3 {
+	width: 310px;
+	float: left;
+	margin: 10px 5px 10px 5px;
+}
+
+.indexcolumn3 img {
+	width: 100%;
+	height: 100%;
 }
 
 /* For pages with 3 columns */
 .acolumn1 {
 	float: left;
 	margin: 5px 5px 5px 5px;
-	border: 1px solid red;
 	width: 310px;
 }
 		
@@ -95,7 +110,6 @@ h2{
 	
 .acolumn2 { 
 	margin: 5px 0px 5px 0px;
-	border: 1px solid red;
 	width: 310px;
 	float: left;
 }
@@ -106,7 +120,6 @@ h2{
 		
 .acolumn3 { 
 	margin: 5px 5px 5px 5px;
-	border: 1px solid red;
 	width: 310px;
 	float: right;
 	}
@@ -119,7 +132,6 @@ h2{
 .bcolumn1 {
 	float: left;
 	margin: 5px 5px 5px 5px;
-	border: 1px solid red;
 	width: 470px;
 	height: 100%;
 }
@@ -130,7 +142,6 @@ h2{
 	
 .bcolumn2 { 
 	margin: 5px 0px 5px 0px;
-	border: 1px solid red;
 	width: 470px;
 	height: 100%;
 	float: left;
@@ -146,7 +157,6 @@ h2{
 .row1 {
 	width: 950px;
 	margin: 10px 5px 5px 5px;
-	border: 1px solid red;
 }
 
 .row1 h2 {
@@ -162,13 +172,11 @@ h2{
 
 .row2 {
 	width: 950px;
-	border: 1px solid red;
 	margin: 5px 5px 5px 5px;
 }
 
 .row3 {
 	width: 950px;
-	border: 1px solid red;
 	margin: 5px 5px 5px 5px;
 	clear: both;
 }
@@ -178,7 +186,6 @@ h2{
 	text-align: left;
 	font-size: smaller;
 	color: #80A1D4;
-	border: 1px solid red;
 	overflow: auto;
 	position: absolute;
 	right: 0;
@@ -192,25 +199,24 @@ h2{
 	margin-left: auto;
 	margin-right: auto;
 	padding: 5px;
-	color: #ECECF1; 
 	font-family: "Century Gothic";
 }
 		
 #nav ul {
 	list-style: none;
-	background-color: #ECECF1;
+	background-color: #DAFFEF;
 	text-align: center;
 	list-style-type: none;
-	background-color: #c0fdfb;	
 	padding: 0;
 	margin-top: 0;
+	border-left: 3px solid #DAFFEF;
+	border-right: 3px solid #DAFFEF;
 }
 
 #nav li {
 	font-size: 1em;
 	line-height: 35px;
 	text-align: center;
-	border-right: 1px solid #8D9CA4;
 }
 
 #nav li:last-child {
@@ -325,7 +331,7 @@ table th, td {
 	text-align: center;
 	width: 960px;
 	font-size: 2em;
-	border: 1px solid blue;
+	border: 4px double #B3BFB8;
 }
 
 .bannerbuttons {
@@ -366,10 +372,12 @@ table th, td {
 	height: 100px;
 	margin: auto;
 	clear: both;
-	background-color: #ECECF1;
+	background-color: #DAFFEF;
 	color: #000;
 	padding-top: 20px;
 	position: relative;
+	border-left: 3px solid #DAFFEF;
+	border-right: 3px solid #DAFFEF;
 }
  /* Social media buttons in footer, needs icons and position needs to be aligned with copyright text */
 .socialbuttons {
