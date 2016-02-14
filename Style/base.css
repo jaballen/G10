@@ -67,6 +67,26 @@ h2{
 #map img {   
 	margin: 5px;
 }
+/* Hover text in cloud pic*/
+.cloudpic {
+    width: 300px;
+    height: 250px;
+}
+.overlay {
+       width:300px;
+       height: 150px;
+       background:FFF;
+       opacity:0;       
+}
+.cloudpic:hover.overlay{
+    opacity:0.0;
+    text-align:justify;
+    color:red;
+    font-size:20px;
+    font-weight:300;
+    font-family:"Times New Roman", 'Times New Roman', sans-serif;
+    padding:20px;
+}
  
 .indexcolumn1 {
 	width: 310px;
