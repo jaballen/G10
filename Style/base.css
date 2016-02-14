@@ -45,11 +45,13 @@ h2{
 .headerimg {
 	margin: auto;
 	padding-top: 5px;
+	width: 190px;
 	height: 190px;
 	position: relative;
 }
 
 .headerimg img {
+	width: 190px;
 	height: 190px;
 }
 
@@ -65,7 +67,6 @@ h2{
 #map img {   
 	margin: 5px;
 }
-<<<<<<< HEAD
 /* Hover text in cloud pic*/
 .cloudpic {
     width: 300px;
@@ -85,12 +86,6 @@ h2{
     font-weight:300;
     font-family:"Times New Roman", 'Times New Roman', sans-serif;
     padding:20px;
-=======
-
-.gallery img {
-	height: 310px;
-
->>>>>>> 986699d2a1dc37cc5fb1bffb9cf4b41ebc078458
 }
  
 .indexcolumn1 {
