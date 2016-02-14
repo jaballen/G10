@@ -8,17 +8,16 @@ body {
 
 
 p {
-	font-family: sans-serif;
+	font-family: "Century Gothic";
 	padding: 5px;
 }
 h1 {
-	font-family: sans-serif;
+	font-family: "Century Gothic";
 	font-size:170%;
-	padding: 5px;
 }
 
 h2{
-  font-family: sans-serif;
+	font-family: "Century Gothic";
 	text-align: center;
     /*padding-top: 200px;
     padding-bottom: 500px;*/
@@ -46,13 +45,11 @@ h2{
 .headerimg {
 	margin: auto;
 	padding-top: 5px;
-	width: 190px;
 	height: 190px;
 	position: relative;
 }
 
 .headerimg img {
-	width: 190px;
 	height: 190px;
 }
 
@@ -68,26 +65,7 @@ h2{
 #map img {   
 	margin: 5px;
 }
-/* Hover text in cloud pic*/
-.cloudpic {
-    width: 300px;
-    height: 250px;
-}
-.overlay {
-       width:300px;
-       height: 150px;
-       background:FFF;
-       opacity:0;       
-}
-.cloudpic:hover.overlay{
-    opacity:0.0;
-    text-align:justify;
-    color:red;
-    font-size:20px;
-    font-weight:300;
-    font-family:"Times New Roman", 'Times New Roman', sans-serif;
-    padding:20px;
-}
+
  
 .indexcolumn1 {
 	width: 310px;
@@ -214,11 +192,14 @@ h2{
 	margin-left: auto;
 	margin-right: auto;
 	padding: 5px;
-	color: #c0fdfb; 
-	font-family: sans-serif;
+	color: #ECECF1; 
+	font-family: "Century Gothic";
 }
 		
 #nav ul {
+	list-style: none;
+	background-color: #ECECF1;
+	text-align: center;
 	list-style-type: none;
 	background-color: #c0fdfb;	
 	padding: 0;
@@ -238,7 +219,7 @@ h2{
 
 #nav a {
 	text-decoration: none;
-	color: #8D9CA4;
+	color: #000;
 	display: block;
 	padding-left: 0px;
 	border-bottom: 1px solid #888;
@@ -383,8 +364,8 @@ table th, td {
 	height: 100px;
 	margin: auto;
 	clear: both;
-	background-color: #c0fdfb;
-	color: #8D9CA4;
+	background-color: #ECECF1;
+	color: #000;
 	padding-top: 20px;
 	position: relative;
 }
