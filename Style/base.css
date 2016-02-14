@@ -287,13 +287,26 @@ input[type=submit] {
 /* Social media banner that only appears on index.html */
 .socialbanner {
 	clear: both;
+	overflow: auto;
 	margin: auto;
 	margin-bottom: 10px;
+	position: relative;
 	text-align: center;
 	width: 960px;
-	height: 150px;
 	font-size: 2em;
 	border: 1px solid blue;
+}
+
+.bannerbuttons {
+	margin: 20px;
+	color: #80A1D4;
+	position: absolute;
+	right: 0;
+}
+
+.bannerbuttons img{
+	width: 75px;
+	height: 75px;
 }
 
 /* Table with hours for location_contact.html */
@@ -317,7 +330,7 @@ input[type=submit] {
 }
 /* Footer stays at bottom of page beneath content */
 #footer {
-	text-align: center;
+	text-align: left;
 	width: 960px;
 	height: 100px;
 	margin: auto;
@@ -325,9 +338,19 @@ input[type=submit] {
 	background-color: #c0fdfb;
 	color: #8D9CA4;
 	padding-top: 20px;
+	position: relative;
 }
  /* Social media buttons in footer, needs icons and position needs to be aligned with copyright text */
-#footer .socialbuttons {
-	float: right;
+.socialbuttons {
+	margin: 25px;
+	color: #80A1D4;
+	overflow: auto;
+	position: absolute;
+	right: 0;
+	top: 5px;
+}
+
+.socialbuttons img{
+	width: 50px;
 	height: 50px;
 }
