@@ -45,13 +45,11 @@ h2{
 .headerimg {
 	margin: auto;
 	padding-top: 5px;
-	width: 190px;
 	height: 190px;
 	position: relative;
 }
 
 .headerimg img {
-	width: 190px;
 	height: 190px;
 }
 
@@ -66,6 +64,11 @@ h2{
 
 #map img {   
 	margin: 5px;
+}
+
+.gallery img {
+	height: 310px;
+
 }
  
 .indexcolumn1 {
