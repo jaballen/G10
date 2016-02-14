@@ -1,8 +1,10 @@
+
 body {
 	margin: 0;
     background-color: #fafbf5;
 	width: 960px:
 }
+
 
 p {
 	font-family: sans-serif;
@@ -11,6 +13,13 @@ p {
 h1 {
 	font-family: sans-serif;
 	padding: 5px;
+}
+
+h2{
+  font-family: sans-serif;
+	text-align: center;
+    padding-top: 200px;
+    padding-bottom: 500px;
 }
 
 #wrapper {
@@ -51,7 +60,7 @@ h1 {
 #map img {   
 	margin: 5px;
 }
-
+ 
 .indexcolumn1 {
 	width: 310px;
 	float: left;
@@ -73,10 +82,11 @@ h1 {
 	border: 1px solid red;
 	width: 310px;
 	height: 500px;
+    image-resolution: snap;
 }
 		
 .acolumn1 img {
-	width: 250px;
+	width: 225px;
 }
 	
 .acolumn2 { 
@@ -86,10 +96,11 @@ h1 {
 	width: 310px;
 	height: 500px;
 	float: left;
+    image-resolution: snap;
 }
 		
 .acolumn2 img {
-	width: 250px;
+	width: 225px;
 }
 		
 .acolumn3 { 
@@ -99,10 +110,11 @@ h1 {
 	width: 310px;
 	height: 500px;
 	float: right;
+     image-resolution: snap;
 	}
 		
 .acolumn3 img {
-	width: 250px;
+	width: 225px;
 }
 
 /* For pages with 2 columnns */
