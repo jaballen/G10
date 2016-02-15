@@ -2,7 +2,6 @@ body {
 	margin: 0;
 	padding: 0;
     background-color: #FCFFFD;
-	width: 960px:
 }
 
 
@@ -300,7 +299,7 @@ input[type=submit] {
 	border: 4px double #B3BFB8;
 }
 
-#menu {
+.menu {
 	border: 4px double #B3BFB8;
 }
 
