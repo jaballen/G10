@@ -4,6 +4,58 @@
 		<meta charset="utf-8">
 		<title>Cupcakes on a Cloud</title>
 		<link rel="stylesheet" type="text/css" href="Style/base.css">
+
+    <script>
+
+        function LoginForm() {
+            var useremail = document.getElementById('useremail');
+            var useremailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+            var pword = document.getElementById('pword');
+            var pwordRegex = /^(?=.*\d)(?=.*[a-zA-Z]).{4,8}$/;
+
+            if (useremail.value == "") {
+                useremail.style.borderColor = "red";
+                document.getElementById("required").style.display = "inline";
+                return false;
+            } else {
+                useremail.style.borderColor = "#ccc";
+                document.getElementById("required").style.display = "none";
+            }
+            if (!useremail.value.match(useremailRegex)) {
+                useremail.style.borderColor = "red";
+                document.getElementById("required").style.display = "inline";
+                document.getElementById("invalid").style.display = "inline";
+                return false;
+            } else {
+                useremail.style.borderColor = "#ccc";
+                document.getElementById("required").style.display = "none";
+                document.getElementById("invalid").style.display = "none";
+            }
+
+            if (pword.value == "") {
+                pword.style.borderColor = "red";
+                document.getElementById("required").style.display = "inline";
+                return false;
+            } else {
+                pword.style.borderColor = "#ccc";
+                document.getElementById("required").style.display = "none";
+            }
+
+            if (!pword.value.match(pwordRegex)) {
+                pword.style.borderColor = "red";
+                document.getElementById("required").style.display = "inline";
+                document.getElementById("invalid").style.display = "inline";
+                return false;
+            } else {
+                pword.style.borderColor = "#ccc";
+                document.getElementById("required").style.display = "none";
+                document.getElementById("invalid").style.display = "none";
+            }
+            return true;
+        }
+
+     </script>
+
 	</head>
 	
 	<body>
@@ -43,21 +95,24 @@
 			</div>
 				
 			<!-- div content -->
+         <div>
 			<div id="content">
 				<div class="bcolumn1" id="centering">
-					<div id="form">
-					<form action="http://webdevfoundations.net/scripts/formdemo.asp" method="post">
-						<h1>LOG IN</h1>
-						<label for="email">EMAIL</label>
-						<input type="text" name="email" id="email">
-						PASSWORD<br><input type="password" name="pword" id="pword">
+					<form id="form" onsubmit="return LoginForm()"action="http://webdevfoundations.net/scripts/formdemo.asp"method="post">
+						<h1>LOG IN<span id="required" style="display: none">&nbsp;**Please fill in the highlighted field</span></h1>
+						<label for="useremail">EMAIL<span id="invalid" style="display: none">&nbsp;*Please type in a valid email login</span></label>
+						<input type="text" name="useremail" id="useremail">
+                        <label for="password">PASSWORD<span id="invalid" style="display: none">&nbsp;<br>*Please enter a password( must contain at least 1 number and 1 character)</span></label>
+                        <br>
+                        <input type="password" name="pword" id="pword">
 						<br>
-						<input type="Submit" value="Login">
+						<input type="Submit">
 					</form>
 					</div>
 				</div>	
 			</div>
 
+            
 			<!-- div footer -->
 			<div id="footer">
 				<p>© 2016 | Cupcakes on a Cloud | <a href="sitemap.html">Sitemap</a></p>
