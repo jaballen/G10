@@ -4,6 +4,74 @@
 		<meta charset="utf-8">
 		<title>Cupcakes on a Cloud</title>
 		<link rel="stylesheet" type="text/css" href="Style/base.css">
+		<script>
+		function ValidateForm(){
+			var fn = document.getElementById('firstname');
+			var ln = document.getElementById('lastname');
+			var email = document.getElementById('email');
+			var emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+			var phone = document.getElementById('phonenum');
+			var phoneRegex = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/
+			var birthday = document.getElementById('birthday');
+			if(fn.value == ""){
+				fn.style.borderColor = "red";
+				document.getElementById("required").style.display = "inline";
+				return false;
+			} else {
+				fn.style.borderColor = "#ccc";
+				document.getElementById("required").style.display = "none";
+			}
+			if(ln.value == ""){
+				ln.style.borderColor = "red";
+				document.getElementById("required").style.display = "inline";
+				return false;
+			} else {
+				ln.style.borderColor = "#ccc";
+				document.getElementById("required").style.display = "none";
+			}
+			if(email.value == ""){
+				email.style.borderColor = "red";
+				document.getElementById("required").style.display = "inline";
+				return false;
+			} else {
+				email.style.borderColor = "#ccc";
+				document.getElementById("required").style.display = "none";
+			}
+			if (!email.value.match(emailRegex)) {
+				email.style.borderColor = "red";
+				document.getElementById("required").style.display = "inline";
+				document.getElementById("invalid").style.display = "inline";
+				return false;
+			} else {
+				email.style.borderColor = "#ccc";
+				document.getElementById("required").style.display = "none";
+				document.getElementById("invalid").style.display = "none";
+			}
+			if(phone.value == ""){
+				phone.style.borderColor = "red";
+				document.getElementById("required").style.display = "inline";
+				return false;
+			} else {
+				phone.style.borderColor = "#ccc";
+				document.getElementById("required").style.display = "none";
+			}
+			if (!phone.value.match(phoneRegex)) {
+				phone.style.borderColor = "red";
+				return false;
+			} else {
+				phone.style.borderColor = "#ccc";
+			}
+			if(birthday.value == null){
+				birthday.style.borderColor = "red";
+				document.getElementById("required").style.display = "inline";
+				return false;
+			} else {
+				birthday.style.borderColor = "#ccc";
+				document.getElementById("required").style.display = "none";
+			}
+			return true;
+		}
+		</script>
 	</head>
 	
 	<body>
@@ -58,23 +126,25 @@
 					</ul>
 				</div>
 				<div class="bcolumn2">
-					<div id="form">
-					<form action="http://webdevfoundations.net/scripts/formdemo.asp" method="post">
-						<h1>SIGN UP</h1>
+					<form id="form" onsubmit="return ValidateForm()"action="http://webdevfoundations.net/scripts/formdemo.asp" method="post">
+						<h1>SIGN UP<span id="required" style="display: none">&nbsp;*Please fill in the highlighted field</span></h1>
 						<label for="firstname">FIRST NAME</label>
 						<input type="text" id="firstname" name="firstname">
 						<br>
 						<label for="lastname">LAST NAME</label>
 						<input type="text" id="lastname" name="lastname">
 						<br>
-						<label for="email">EMAIL</label>
+						<label for="email">EMAIL<span id="invalid" style="display: none">&nbsp;*Please type in a valid email</span></label>
 						<input type="text" id="email" name="email">
 						<br>
 						<label for="phonenum">PHONE NUMBER</label>
 						<input type="text" id="phonenum" name="lastname">
+						<br>
 						<label for="phonenum">PASSWORD</label>
 						<input type="text" id="password" name="password">
 						<br>
+						<label for="phonenum">CONFIRM PASSWORD</label>
+						<input type="text" id="password" name="password">
 						<label for="birthday">BIRTHDAY</label>
 						<br>
 						<input type="date" id="birthday" name="bday">

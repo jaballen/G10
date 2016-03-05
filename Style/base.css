@@ -293,11 +293,19 @@ input[type=submit] {
     cursor: pointer;
 }
 
-.required {
+#required {
 	display: none;
 	color: red;
-	font-weight: bold;
+	font-size: small;
+	font-weight: normal;
 }
+
+#invalid {
+	display: none;
+	color: red;
+	font-size: small;
+}
+
 /* Centers div */
 #centering {
 	float: none;

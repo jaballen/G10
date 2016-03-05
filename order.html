@@ -16,33 +16,45 @@
 			var order = document.getElementById('orderdesc');
 			if(fn.value == ""){
 				fn.style.borderColor = "red";
+				document.getElementById("required").style.display = "inline";
 				return false;
 			} else {
 				fn.style.borderColor = "#ccc";
+				document.getElementById("required").style.display = "none";
 			}
-			if (ln.value == ""){
+			if(ln.value == ""){
 				ln.style.borderColor = "red";
+				document.getElementById("required").style.display = "inline";
 				return false;
 			} else {
 				ln.style.borderColor = "#ccc";
+				document.getElementById("required").style.display = "none";
 			}
-			if (email.value == ""){
+			if(email.value == ""){
 				email.style.borderColor = "red";
+				document.getElementById("required").style.display = "inline";
 				return false;
 			} else {
 				email.style.borderColor = "#ccc";
+				document.getElementById("required").style.display = "none";
 			}
 			if (!email.value.match(emailRegex)) {
 				email.style.borderColor = "red";
+				document.getElementById("required").style.display = "inline";
+				document.getElementById("invalid").style.display = "inline";
 				return false;
 			} else {
 				email.style.borderColor = "#ccc";
+				document.getElementById("required").style.display = "none";
+				document.getElementById("invalid").style.display = "none";
 			}
-			if (phone.value == ""){
+			if(phone.value == ""){
 				phone.style.borderColor = "red";
+				document.getElementById("required").style.display = "inline";
 				return false;
 			} else {
 				phone.style.borderColor = "#ccc";
+				document.getElementById("required").style.display = "none";
 			}
 			if (!phone.value.match(phoneRegex)) {
 				phone.style.borderColor = "red";
@@ -109,12 +121,12 @@
 				</div>
 				<div class="bcolumn1">
                     <form name="orderForm" id="form" onsubmit="return ValidateForm()" action="http://webdevfoundations.net/scripts/formdemo.asp" method="post">
-						<h1>Order Form</h1>
+						<h1>Order Form<span id="required" style="display: none">&nbsp;*Please fill in the highlighted field</span></h1>
 						<label for="firstname">FIRST NAME<span class="required">*</span></label>
 						<input type="text" name="firstname" id="firstname" >
 						<label for="lastname">LAST NAME</label>
 						<input type="text" name="lastname" id="lastname">
-						<label for="email">EMAIL</label>
+						<label for="email">EMAIL<span id="invalid" style="display: none">&nbsp;*Please type in a valid email</span></label>
 						<input type="text" name="email" id="email">
 						<label for="phonenum">PHONE NUMBER</label>
 						<input type="text" name="phonenum" id="phonenum">
