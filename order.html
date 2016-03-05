@@ -11,6 +11,7 @@
 			var email = document.getElementById('email');
 			var emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 			var phone = document.getElementById('phonenum');
+			var phoneRegex = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/
 			var date = document.getElementById('eventdate');
 			var order = document.getElementById('orderdesc');
 			if(fn.value == ""){
@@ -38,6 +39,12 @@
 				email.style.borderColor = "#ccc";
 			}
 			if (phone.value == ""){
+				phone.style.borderColor = "red";
+				return false;
+			} else {
+				phone.style.borderColor = "#ccc";
+			}
+			if (!phone.value.match(phoneRegex)) {
 				phone.style.borderColor = "red";
 				return false;
 			} else {
