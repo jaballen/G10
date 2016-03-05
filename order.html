@@ -4,6 +4,60 @@
 		<meta charset="utf-8">
 		<title>Cupcakes on a Cloud</title>
 		<link rel="stylesheet" type="text/css" href="Style/base.css">
+		<script>
+		function ValidateForm(){
+			var fn = document.getElementById('firstname');
+			var ln = document.getElementById('lastname');
+			var email = document.getElementById('email');
+			var emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+			var phone = document.getElementById('phonenum');
+			var date = document.getElementById('eventdate');
+			var order = document.getElementById('orderdesc');
+			if(fn.value == ""){
+				fn.style.borderColor = "red";
+				return false;
+			} else {
+				fn.style.borderColor = "#ccc";
+			}
+			if (ln.value == ""){
+				ln.style.borderColor = "red";
+				return false;
+			} else {
+				ln.style.borderColor = "#ccc";
+			}
+			if (email.value == ""){
+				email.style.borderColor = "red";
+				return false;
+			} else {
+				email.style.borderColor = "#ccc";
+			}
+			if (!email.value.match(emailRegex)) {
+				email.style.borderColor = "red";
+				return false;
+			} else {
+				email.style.borderColor = "#ccc";
+			}
+			if (phone.value == ""){
+				phone.style.borderColor = "red";
+				return false;
+			} else {
+				phone.style.borderColor = "#ccc";
+			}
+			if (date.value == null){
+				date.style.borderColor = "red";
+				return false;
+			} else {
+				date.style.borderColor = "#ccc";
+			}
+			if (order.value == ""){
+				order.style.borderColor = "red";
+				return false;
+			} else {
+				order.style.borderColor = "#ccc";
+			}
+			return true;
+		}
+		</script>
 	</head>
 	
 	<body>
@@ -47,11 +101,10 @@
 				<h1>CUSTOM ORDERS</h1>
 				</div>
 				<div class="bcolumn1">
-					<div id="form">
-                    <form action="http://webdevfoundations.net/scripts/formdemo.asp" method="post">
+                    <form name="orderForm" id="form" onsubmit="return ValidateForm()" action="http://webdevfoundations.net/scripts/formdemo.asp" method="post">
 						<h1>Order Form</h1>
-						<label for="firstname">FIRST NAME</label>
-						<input type="text" name="firstname" id="firstname">
+						<label for="firstname">FIRST NAME<span class="required">*</span></label>
+						<input type="text" name="firstname" id="firstname" >
 						<label for="lastname">LAST NAME</label>
 						<input type="text" name="lastname" id="lastname">
 						<label for="email">EMAIL</label>
@@ -64,6 +117,7 @@
 						<br><br>
 						<label for="aboutus">HOW DID YOU HEAR ABOUT US?</label>
 						<select name="aboutus" id="aboutus">
+							<option value="blank"></option>
 							<option value="Social Media">Social Media</option>
                             <option value="Friends">Friends</option>
                             <option value="Other">Other</option>
@@ -75,7 +129,6 @@
 						<br>
 						<input id="mySubmit" type="submit" value="Submit">
                     </form>
-                </div>
 				</div>
 				<div class="bcolumn2">
                     <h2>HAVE A SPECIAL EVENT?</h2>
