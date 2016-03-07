@@ -306,6 +306,12 @@ input[type=submit] {
 	font-size: small;
 }
 
+#invalid1 {
+	display: none;
+	color: red;
+	font-size: small;
+}
+
 /* Centers div */
 #centering {
 	float: none;
