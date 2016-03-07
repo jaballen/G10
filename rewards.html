@@ -64,7 +64,7 @@
 				document.getElementById("required").style.display = "none";
 				document.getElementById("phoneInvalid").style.display = "none";
 			}
-			if(birthday.value == null){
+			if(birthday.value == ""){
 				birthday.style.borderColor = "red";
 				document.getElementById("required").style.display = "inline";
 				return false;
@@ -78,7 +78,7 @@
 		}
 		function passValid() {
 			var testPass = false;
-			var password = document.getElementById('password1');
+			var password1 = document.getElementById('password1');
 			var password2 = document.getElementById('password2');
 			var match = document.getElementById('match');
 			var nomatch = document.getElementById('nomatch');
