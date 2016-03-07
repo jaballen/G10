@@ -1,0 +1,117 @@
+Skip to content
+This repository  
+Search
+Pull requests
+Issues
+Gist
+ @elichu
+ Unwatch 5
+  Star 0
+  Fork 0 jadebeet/G10
+ Code  Issues 2  Pull requests 0  Wiki  Pulse  Graphs
+Branch: master Find file Copy pathG10/dereg.html
+a523ff8  an hour ago
+@Cruton808 Cruton808 deregister page js completed
+3 contributors @jadebeet @elichu @Cruton808
+RawBlameHistory     103 lines (90 sloc)  3.24 KB
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Cupcakes on a Cloud</title>
+		<link rel="stylesheet" type="text/css" href="Style/base.css">
+
+    <script>
+        function DeRegForm() {
+            var deregpword = document.getElementById('deregpword');
+            var confirmpword = document.getElementById('confirmpword');
+            if (deregpword != confirmpword) {
+                deregpword.style.borderColor = "red";
+                confirmpword.style.borderColor = "red";
+                document.getElementById("required").style.display = "inline";
+                return false;
+            } else {
+                deregpword.style.borderColor = "#ccc";
+                confirmpword.style.borderColor = "#ccc";
+                document.getElementById("required").style.display = "none";  
+            }
+            return true;
+        }
+     </script>
+	</head>
+	
+	<body>
+	
+		<div id="wrapper">
+			<!-- div header -->
+			<div id="header">
+				<div class="headerimg">
+				<a href="index.html"><img src="Images/templogo.png"
+				alt="Cupcakes on a Cloud"></a>
+				</div>
+				<div class="address">
+				<p>1154 Robson St<br>Vancouver, BC<br>V6E 1B5<br>(778)123-4567<br><br>OPEN 10:00 - 8:00<br>CLOSED WEDNESDAYS</p>
+				</div>
+			</div>
+
+			<!-- div navigation -->
+			<div id="nav">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a>
+						<ul>
+							<li><a href="about.html">Our Story</a></li>
+							<li><a href="location_contact.html">Location</a></li>
+						</ul>
+					</li>
+					<li><a href="gallery.html">Gallery</a></li>
+					<li><a href="order.html">Order</a></li>
+					<li><a href="menu.html">Menu</a></li>
+					<li><a href="rewards.html">Rewards</a>
+						<ul>
+							<li><a href="login.html">Log In</a></li>
+							<li><a href="rewards.html">Sign Up</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+				
+			<!-- div content -->
+			<div id="content">
+				<div class="bcolumn1" id="centering">
+					<div id ="form">
+					<form id="form" onsubmit="return DeRegForm()" action="http://webdevfoundations.net/scripts/formdemo.asp" method="post">
+						<h1>Are you sure you want to delete your account?<span id="required" style="display: none"><br>&nbsp;*PLEASE ENTER YOUR PASSWORD TWICE</span></h1>
+						<label for="password">Please enter your password:</label>
+                        <br>
+						<input type="text" name="deregpword" id="deregpword">
+                        <br>
+                        <br>
+                        <label for="confirmpassword">Please confirm your password:</label>
+                        <input type="text" name="confirmpword" id="confirmpword">
+                        <br>
+						<input id="passSubmit" type="submit" value="Submit" onclick="return DeRegForm()"/>
+					</form>
+					</div>
+				</div>		
+				<br>
+			</div>
+
+			<!-- div footer -->
+			<div id="footer">
+				<p>© 2016 | Cupcakes on a Cloud | <a href="sitemap.html">Sitemap</a></p>
+				
+				<!-- div socialbuttons -->
+				<div class="socialbuttons">
+					<a href="facebook"><img src="Images/facebook.png" alt="Facebook"></a>
+					<a href="twitter"><img src="Images/twitter.png" alt="Twitter"></a>
+					<a href="instagram"><img src="Images/instagram.png" alt="Instagram"></a>
+				</div>
+			</div>
+			
+		</div>		
+	</body>
+	</html>
+		
+Status API Training Shop Blog About Pricing
+© 2016 GitHub, Inc. Terms Privacy Security Contact Help
