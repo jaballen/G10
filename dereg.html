@@ -4,6 +4,27 @@
 		<meta charset="utf-8">
 		<title>Cupcakes on a Cloud</title>
 		<link rel="stylesheet" type="text/css" href="Style/base.css">
+
+    <script>
+
+        function DeRegForm() {
+            var deregpword = document.getElementById('deregpword');
+            var confirmpword = document.getElementById('confirmpword');
+
+            if (deregpword != confirmpword) {
+                deregpword.style.borderColor = "red";
+                confirmpword.style.borderColor = "red";
+                document.getElementById("required").style.display = "inline";
+                return false;
+            } else {
+                deregpword.style.borderColor = "#ccc";
+                confirmpword.style.borderColor = "#ccc";
+                document.getElementById("required").style.display = "none";  
+            }
+            return true;
+        }
+
+     </script>
 	</head>
 	
 	<body>
@@ -46,11 +67,17 @@
 			<div id="content">
 				<div class="bcolumn1" id="centering">
 					<div id ="form">
-					<form action="http://webdevfoundations.net/scripts/formdemo.asp" method="post">
-						<h1>Are you sure you want to delete your account?</h1>
+					<form id="form" onsubmit="return DeRegForm()" action="http://webdevfoundations.net/scripts/formdemo.asp" method="post">
+						<h1>Are you sure you want to delete your account?<span id="required" style="display: none"><br>&nbsp;*PLEASE ENTER YOUR PASSWORD TWICE</span></h1>
 						<label for="password">Please enter your password:</label>
-						<input type="text" name="password" id="password">
-						<input id="passSubmit" type="submit" value="Submit">
+                        <br>
+						<input type="text" name="deregpword" id="deregpword">
+                        <br>
+                        <br>
+                        <label for="confirmpassword">Please confirm your password:</label>
+                        <input type="text" name="confirmpword" id="confirmpword">
+                        <br>
+						<input id="passSubmit" type="submit" value="Submit" onclick="return DeRegForm()"/>
 					</form>
 					</div>
 				</div>		
