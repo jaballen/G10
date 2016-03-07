@@ -64,7 +64,8 @@
 				document.getElementById("required").style.display = "none";
 				document.getElementById("phoneInvalid").style.display = "none";
 			}
-			if(birthday.value == null){
+			return passValid();
+			if(!birthday.value){
 				birthday.style.borderColor = "red";
 				document.getElementById("required").style.display = "inline";
 				return false;
@@ -72,8 +73,6 @@
 				birthday.style.borderColor = "#ccc";
 				document.getElementById("required").style.display = "none";
 			}			
-			
-			return passValid();
 		}
 		function passValid() {
 			var testPass = false;
