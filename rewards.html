@@ -49,18 +49,20 @@
 			if(phone.value == ""){
 				phone.style.borderColor = "red";
 				document.getElementById("required").style.display = "inline";
+				return false;
+			} else {
+				phone.style.borderColor = "#ccc";
+				document.getElementById("required").style.display = "none";
+			}
+			if (!phone.value.match(phoneRegex)) {
+				phone.style.borderColor = "red";
+				document.getElementById("required").style.display = "inline";
 				document.getElementById("phoneInvalid").style.display = "inline";
 				return false;
 			} else {
 				phone.style.borderColor = "#ccc";
 				document.getElementById("required").style.display = "none";
-				document.getElementById("phoneInvalid").style.display = "inline";
-			}
-			if (!phone.value.match(phoneRegex)) {
-				phone.style.borderColor = "red";
-				return false;
-			} else {
-				phone.style.borderColor = "#ccc";
+				document.getElementById("phoneInvalid").style.display = "none";
 			}
 			if(birthday.value == null){
 				birthday.style.borderColor = "red";
@@ -82,6 +84,7 @@
 			var pwordRegex = /^(?=.*\d)(?=.*[a-zA-Z]).{4,8}$/;
 			if (!password1.value.match(pwordRegex)) {
 				password1.style.borderColor = "red";
+				document.getElementById("required").style.display = "inline";
 				match.innerHTML = "  Password too weak";
 				nomatch.innerHTML = " ";
 				return false;
@@ -92,11 +95,13 @@
 			
 			if (password1.value != password2.value || (password2.value == "" && password1.value == "")) {
 				nomatch.innerHTML = "  Passwords do not match";
+				document.getElementById("required").style.display = "inline";
 				return false;
 			} else {
 				match.innerHTML = "  Passwords match";
 				nomatch.innerHTML = "";
 				password1.style.borderColor = "#ccc";
+				document.getElementById("required").style.display = "none";
 			}		
 			return password1.value == password2.value && password1.value.match(pwordRegex) && password2.value != "" && password1.value != "";
 		}
