@@ -16,7 +16,6 @@
 			if(fn.value == ""){
 				fn.style.borderColor = "red";
 				document.getElementById("required").style.display = "inline";
-				return false;
 			} else {
 				fn.style.borderColor = "#ccc";
 				document.getElementById("required").style.display = "none";
@@ -68,8 +67,9 @@
 			} else {
 				birthday.style.borderColor = "#ccc";
 				document.getElementById("required").style.display = "none";
-			}		
-			return true;			
+			}			
+			return passValid();
+			
 		}
 		function passValid() {
 			var password = document.getElementById('password1');
@@ -79,20 +79,21 @@
 			var pwordRegex = /^(?=.*\d)(?=.*[a-zA-Z]).{4,8}$/;
 			if (!password1.value.match(pwordRegex)) {
 				password1.style.borderColor = "red";
-				match.innerHTML = "Password too weak";
+				match.innerHTML = "  Password too weak";
 				nomatch.innerHTML = " ";
 			} else {
 				password1.style.borderColor = "#ccc";
-				match.innerHTML = "Password is valid";
+				match.innerHTML = "  Password is valid";
 			}
 			
-			if (password1.value != password2.value || password2.value == null) {
-				nomatch.innerHTML = "Passwords do not match";
+			if (password1.value != password2.value || (password2.value == "" && password1.value == "")) {
+				nomatch.innerHTML = "  Passwords do not match";
 			} else {
-				match.innerHTML = "Passwords match";
+				match.innerHTML = "  Passwords match";
 				nomatch.innerHTML = "";
 				password1.style.borderColor = "#ccc";
-			}
+			}		
+			return password1.value == password2.value && password1.value.match(pwordRegex) && password2.value != "" && password1.value != "";
 		}
 			
 		
@@ -151,7 +152,7 @@
 					</ul>
 				</div>
 				<div class="bcolumn2">
-					<form id="form" onsubmit="return ValidateForm()"action="http://webdevfoundations.net/scripts/formdemo.asp" method="post">
+					<form id="form" onsubmit="return ValidateForm()" action="http://webdevfoundations.net/scripts/formdemo.asp" method="post">
 						<h1>SIGN UP<span id="required" style="display: none">&nbsp;*Please fill in the highlighted field</span></h1>
 						<label for="firstname">FIRST NAME</label>
 						<input type="text" id="firstname" name="firstname">
@@ -167,11 +168,11 @@
 						<br>
 						<label for="password">PASSWORD</label>
 						<br>
-						<input type="password" id="password1" name="password" onblur="passValid()"><span id="match"></span>
+						<input type="password" id="password1" name="password" onblur="ValidateForm()"><span id="match"></span>
 						<br>
 						<label for="password">CONFIRM PASSWORD</label>
 						<br>
-						<input type="password" id="password2" name="password" onblur="passValid()"><span id="nomatch"></span>
+						<input type="password" id="password2" name="password" onblur="ValidateForm()"><span id="nomatch"></span>
 						<br>
 						<label for="birthday">BIRTHDAY</label>
 						<br>

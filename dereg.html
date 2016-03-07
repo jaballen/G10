@@ -4,6 +4,21 @@
 		<meta charset="utf-8">
 		<title>Cupcakes on a Cloud</title>
 		<link rel="stylesheet" type="text/css" href="Style/base.css">
+		<script>
+		
+		function check() {
+			var password = document.getElementById('password');
+			var text = document.getElementById('text');
+			if (password.value == "") {
+				password.style.borderColor = "red";
+				return false;
+			} else {
+				password.style.borderColor = "#ccc";
+				text.innerHTML("");
+			}
+		}
+		</script>
+		
 	</head>
 	
 	<body>
@@ -46,10 +61,10 @@
 			<div id="content">
 				<div class="bcolumn1" id="centering">
 					<div id ="form">
-					<form action="http://webdevfoundations.net/scripts/formdemo.asp" method="post">
+					<form id="form" onsubmit="return check()" action="http://webdevfoundations.net/scripts/formdemo.asp" method="post">
 						<h1>Are you sure you want to delete your account?</h1>
 						<label for="password">Please enter your password:</label>
-						<input type="text" name="password" id="password">
+						<input type="text" name="password" id="password" onblur="check()">
 						<input id="passSubmit" type="submit" value="Submit">
 					</form>
 					</div>
