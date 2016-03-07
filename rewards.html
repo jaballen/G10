@@ -12,7 +12,7 @@
 			var emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 			var phone = document.getElementById('phonenum');
 			var phoneRegex = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/
-			var birthday = document.getElementById('birthday');
+			var birthday = document.getElementById('birthday');			
 			if(fn.value == ""){
 				fn.style.borderColor = "red";
 				document.getElementById("required").style.display = "inline";
@@ -68,9 +68,34 @@
 			} else {
 				birthday.style.borderColor = "#ccc";
 				document.getElementById("required").style.display = "none";
-			}
-			return true;
+			}		
+			return true;			
 		}
+		function passValid() {
+			var password = document.getElementById('password1');
+			var password2 = document.getElementById('password2');
+			var match = document.getElementById('match');
+			var nomatch = document.getElementById('nomatch');
+			var pwordRegex = /^(?=.*\d)(?=.*[a-zA-Z]).{4,8}$/;
+			if (!password1.value.match(pwordRegex)) {
+				password1.style.borderColor = "red";
+				match.innerHTML = "Password too weak";
+				nomatch.innerHTML = " ";
+			} else {
+				password1.style.borderColor = "#ccc";
+				match.innerHTML = "Password is valid";
+			}
+			
+			if (password1.value != password2.value || password2.value == null) {
+				nomatch.innerHTML = "Passwords do not match";
+			} else {
+				match.innerHTML = "Passwords match";
+				nomatch.innerHTML = "";
+				password1.style.borderColor = "#ccc";
+			}
+		}
+			
+		
 		</script>
 	</head>
 	
@@ -142,11 +167,11 @@
 						<br>
 						<label for="password">PASSWORD</label>
 						<br>
-						<input type="password" id="password" name="password">
+						<input type="password" id="password1" name="password" onblur="passValid()"><span id="match"></span>
 						<br>
 						<label for="password">CONFIRM PASSWORD</label>
 						<br>
-						<input type="password" id="password" name="password">
+						<input type="password" id="password2" name="password" onblur="passValid()"><span id="nomatch"></span>
 						<br>
 						<label for="birthday">BIRTHDAY</label>
 						<br>
