@@ -300,7 +300,13 @@ input[type=submit] {
 	font-weight: normal;
 }
 
-#invalid {
+#emailInvalid {
+	display: none;
+	color: red;
+	font-size: small;
+}
+
+#phoneInvalid {
 	display: none;
 	color: red;
 	font-size: small;

@@ -39,20 +39,22 @@
 			if (!email.value.match(emailRegex)) {
 				email.style.borderColor = "red";
 				document.getElementById("required").style.display = "inline";
-				document.getElementById("invalid").style.display = "inline";
+				document.getElementById("emailInvalid").style.display = "inline";
 				return false;
 			} else {
 				email.style.borderColor = "#ccc";
 				document.getElementById("required").style.display = "none";
-				document.getElementById("invalid").style.display = "none";
+				document.getElementById("emailInvalid").style.display = "none";
 			}
 			if(phone.value == ""){
 				phone.style.borderColor = "red";
 				document.getElementById("required").style.display = "inline";
+				document.getElementById("phoneInvalid").style.display = "inline";
 				return false;
 			} else {
 				phone.style.borderColor = "#ccc";
 				document.getElementById("required").style.display = "none";
+				document.getElementById("phoneInvalid").style.display = "inline";
 			}
 			if (!phone.value.match(phoneRegex)) {
 				phone.style.borderColor = "red";
@@ -163,10 +165,10 @@
 						<label for="lastname">LAST NAME</label>
 						<input type="text" id="lastname" name="lastname">
 						<br>
-						<label for="email">EMAIL<span id="invalid" style="display: none">&nbsp;*Please type in a valid email</span></label>
+						<label for="email">EMAIL<span id="emailInvalid" style="display: none">&nbsp;*Please enter a valid email</span></label>
 						<input type="text" id="email" name="email">
 						<br>
-						<label for="phonenum">PHONE NUMBER</label>
+						<label for="phonenum">PHONE NUMBER<span id="phoneInvalid" style="display: none">&nbsp;*Please enter a valid phone number</span></label>
 						<input type="text" id="phonenum" name="lastname">
 						<br>
 						<label for="password">PASSWORD</label>
