@@ -64,15 +64,15 @@
 				document.getElementById("required").style.display = "none";
 				document.getElementById("phoneInvalid").style.display = "none";
 			}
-			return passValid();
-			if(!birthday.value){
+			if (!birthday.value){
 				birthday.style.borderColor = "red";
 				document.getElementById("required").style.display = "inline";
 				return false;
 			} else {
 				birthday.style.borderColor = "#ccc";
 				document.getElementById("required").style.display = "none";
-			}			
+			}		
+			return passValid();
 		}
 		function passValid() {
 			var testPass = false;
@@ -176,6 +176,10 @@
 						<label for="phonenum">PHONE NUMBER<span id="phoneInvalid" style="display: none">&nbsp;*Please enter a valid phone number</span></label>
 						<input type="text" id="phonenum" name="phonenum">
 						<br>
+						<label for="birthday">BIRTHDAY</label>
+						<br>
+						<input type="date" id="birthday" name="bday">
+						<br>
 						<label for="password">PASSWORD</label>
 						<br>
 						<input type="password" id="password1" name="password" onblur="ValidateForm()"><span id="match"></span>
@@ -183,10 +187,6 @@
 						<label for="password">CONFIRM PASSWORD</label>
 						<br>
 						<input type="password" id="password2" name="password" onblur="ValidateForm()"><span id="nomatch"></span>
-						<br>
-						<label for="birthday">BIRTHDAY</label>
-						<br>
-						<input type="date" id="birthday" name="bday">
 						<br>
 						<input type="submit">
 						<br>
