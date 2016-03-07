@@ -24,12 +24,12 @@
             if (!useremail.value.match(useremailRegex)) {
                 useremail.style.borderColor = "red";
                 document.getElementById("required").style.display = "inline";
-                document.getElementById("invalid").style.display = "inline";
+                document.getElementById("emailInvalid").style.display = "inline";
                 return false;
             } else {
                 useremail.style.borderColor = "#ccc";
                 document.getElementById("required").style.display = "none";
-                document.getElementById("invalid").style.display = "none";
+                document.getElementById("emailInvalid").style.display = "none";
             }
             if (pword.value == "") {
                 pword.style.borderColor = "red";
@@ -98,10 +98,10 @@
 			<div id="content">
 				<div class="bcolumn1" id="centering">
 					<form id="form" onsubmit="return LoginForm()"action="http://webdevfoundations.net/scripts/formdemo.asp"method="post">
-						<h1>LOG IN<span id="required" style="display: none">&nbsp;*PLEASE FILL IN THE HIGHLIGHTED AREAS</span></h1>
-						<label for="useremail">EMAIL<span id="invalid" style="display: none">&nbsp;*Please type in a valid email login</span></label>
+						<h1>LOG IN<span id="required" style="display: none">&nbsp;*Please fill in the highlighted field</span></h1>
+						<label for="useremail">EMAIL<span id="emailInvalid" style="display: none">&nbsp;Please enter a valid email login</span></label>
 						<input type="text" name="useremail" id="useremail">
-                        <label for="pword">PASSWORD<span id="invalid1" style="display: none">&nbsp;<br>*Please enter your password</span></label>
+                        <label for="pword">PASSWORD<span id="invalid1" style="display: none">&nbsp;<br>Please enter your password</span></label>
                         <br>
                         <input type="password" name="pword" id="pword">
 						<br>
