@@ -87,7 +87,6 @@
 				document.getElementById("required").style.display = "inline";
 				match.innerHTML = "  Password too weak";
 				nomatch.innerHTML = " ";
-				return false;
 			} else {
 				password1.style.borderColor = "#ccc";
 				match.innerHTML = "  Password is valid";
@@ -96,8 +95,7 @@
 			if (password1.value != password2.value || (password2.value == "" && password1.value == "")) {
 				nomatch.innerHTML = "  Passwords do not match";
 				document.getElementById("required").style.display = "inline";
-				return false;
-			} else {
+			} else if (password1.value.match(pwordRegex) && password1.value == password2.value) {
 				match.innerHTML = "  Passwords match";
 				nomatch.innerHTML = "";
 				password1.style.borderColor = "#ccc";
