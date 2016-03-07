@@ -41,12 +41,12 @@
 			if (!email.value.match(emailRegex)) {
 				email.style.borderColor = "red";
 				document.getElementById("required").style.display = "inline";
-				document.getElementById("invalid").style.display = "inline";
+				document.getElementById("emailInvalid").style.display = "inline";
 				return false;
 			} else {
 				email.style.borderColor = "#ccc";
 				document.getElementById("required").style.display = "none";
-				document.getElementById("invalid").style.display = "none";
+				document.getElementById("emailInvalid").style.display = "none";
 			}
 			if(phone.value == ""){
 				phone.style.borderColor = "red";
@@ -58,9 +58,13 @@
 			}
 			if (!phone.value.match(phoneRegex)) {
 				phone.style.borderColor = "red";
+				document.getElementById("required").style.display = "inline";
+				document.getElementById("phoneInvalid").style.display = "inline";
 				return false;
 			} else {
 				phone.style.borderColor = "#ccc";
+				document.getElementById("required").style.display = "none";
+				document.getElementById("phoneInvalid").style.display = "none";
 			}
 			if (date.value == null){
 				date.style.borderColor = "red";
@@ -122,13 +126,13 @@
 				<div class="bcolumn1">
                     <form name="orderForm" id="form" onsubmit="return ValidateForm()" action="http://webdevfoundations.net/scripts/formdemo.asp" method="post">
 						<h1>Order Form<span id="required" style="display: none">&nbsp;*Please fill in the highlighted field</span></h1>
-						<label for="firstname">FIRST NAME<span class="required">*</span></label>
+						<label for="firstname">FIRST NAME</label>
 						<input type="text" name="firstname" id="firstname" >
 						<label for="lastname">LAST NAME</label>
 						<input type="text" name="lastname" id="lastname">
-						<label for="email">EMAIL<span id="invalid" style="display: none">&nbsp;*Please type in a valid email</span></label>
+						<label for="email">EMAIL<span id="emailInvalid" style="display: none">&nbsp;*Please enter a valid email</span></label>
 						<input type="text" name="email" id="email">
-						<label for="phonenum">PHONE NUMBER</label>
+						<label for="phonenum">PHONE NUMBER<span id="phoneInvalid" style="display: none">&nbsp;*Please enter a valid phone number</span></label>
 						<input type="text" name="phonenum" id="phonenum">
 						<label for="eventdate">DATE OF EVENT</label>
 						<br>
