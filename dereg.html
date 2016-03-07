@@ -7,19 +7,21 @@
 
     <script>
         function DeRegForm() {
+			var passValid = false;
             var deregpword = document.getElementById('deregpword');
             var confirmpword = document.getElementById('confirmpword');
-            if (deregpword != confirmpword) {
+            if (deregpword.value != confirmpword.value) {
                 deregpword.style.borderColor = "red";
                 confirmpword.style.borderColor = "red";
                 document.getElementById("required").style.display = "inline";
-                return false;
+                passValid = false;
             } else {
                 deregpword.style.borderColor = "#ccc";
                 confirmpword.style.borderColor = "#ccc";
                 document.getElementById("required").style.display = "none";  
+				passValid = true;
             }
-            return true;
+            return passValid;
         }
      </script>
 	</head>
@@ -68,11 +70,11 @@
 						<h1>Are you sure you want to delete your account?<span id="required" style="display: none"><br>&nbsp;*PLEASE ENTER YOUR PASSWORD TWICE</span></h1>
 						<label for="password">Please enter your password:</label>
                         <br>
-						<input type="text" name="deregpword" id="deregpword">
+						<input type="password" name="deregpword" id="deregpword">
                         <br>
                         <br>
                         <label for="confirmpassword">Please confirm your password:</label>
-                        <input type="text" name="confirmpword" id="confirmpword">
+                        <input type="password" name="confirmpword" id="confirmpword">
                         <br>
 						<input id="passSubmit" type="submit" value="Submit" onclick="return DeRegForm()"/>
 					</form>
