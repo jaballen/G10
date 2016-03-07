@@ -82,6 +82,7 @@
 				password1.style.borderColor = "red";
 				match.innerHTML = "  Password too weak";
 				nomatch.innerHTML = " ";
+				return false;
 			} else {
 				password1.style.borderColor = "#ccc";
 				match.innerHTML = "  Password is valid";
@@ -89,6 +90,7 @@
 			
 			if (password1.value != password2.value || (password2.value == "" && password1.value == "")) {
 				nomatch.innerHTML = "  Passwords do not match";
+				return false;
 			} else {
 				match.innerHTML = "  Passwords match";
 				nomatch.innerHTML = "";
