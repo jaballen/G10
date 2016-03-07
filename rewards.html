@@ -77,31 +77,35 @@
 			
 		}
 		function passValid() {
+			var testPass = false;
 			var password = document.getElementById('password1');
 			var password2 = document.getElementById('password2');
 			var match = document.getElementById('match');
 			var nomatch = document.getElementById('nomatch');
-			var pwordRegex = /^(?=.*\d)(?=.*[a-zA-Z]).{4,8}$/;
+			var pwordRegex = /^(?=.*\d)(?=.*[a-zA-Z]).[^\s]{4,8}$/;
 			if (!password1.value.match(pwordRegex)) {
 				password1.style.borderColor = "red";
 				document.getElementById("required").style.display = "inline";
 				match.innerHTML = "  Password too weak";
 				nomatch.innerHTML = " ";
+				var testPass = false;
 			} else {
 				password1.style.borderColor = "#ccc";
 				match.innerHTML = "  Password is valid";
+				var testPass = true;
 			}
-			
 			if (password1.value != password2.value || (password2.value == "" && password1.value == "")) {
 				nomatch.innerHTML = "  Passwords do not match";
 				document.getElementById("required").style.display = "inline";
+				var testPass = false;
 			} else if (password1.value.match(pwordRegex) && password1.value == password2.value) {
 				match.innerHTML = "  Passwords match";
 				nomatch.innerHTML = "";
 				password1.style.borderColor = "#ccc";
 				document.getElementById("required").style.display = "none";
+				var testPass = true;
 			}		
-			return password1.value == password2.value && password1.value.match(pwordRegex) && password2.value != "" && password1.value != "";
+			return testPass;
 		}
 			
 		
@@ -172,7 +176,7 @@
 						<input type="text" id="email" name="email">
 						<br>
 						<label for="phonenum">PHONE NUMBER<span id="phoneInvalid" style="display: none">&nbsp;*Please enter a valid phone number</span></label>
-						<input type="text" id="phonenum" name="lastname">
+						<input type="text" id="phonenum" name="phonenum">
 						<br>
 						<label for="password">PASSWORD</label>
 						<br>
