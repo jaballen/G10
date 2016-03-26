@@ -32,7 +32,7 @@
 	//if ( isset($email) && isset($password) )
 	//{
 		//Connect to mysql server
-		$conn= mysql_connect($server, $username, $password);	
+		$conn= mysql_connect($server, $username, $password);
 		if(!$conn) {
 			die('Failed to connect to server: ' . mysql_error());
 		}
