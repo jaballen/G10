@@ -32,7 +32,7 @@
 	//if ( isset($email) && isset($password) )
 	//{
 		//Connect to mysql server
-		$conn= mysql_connect($server, $username, $password);
+		$conn= mysql_connect($server, $username, $password);	
 		if(!$conn) {
 			die('Failed to connect to server: ' . mysql_error());
 		}
@@ -62,6 +62,7 @@
 			$_SESSION['SESS_MEMBER_ID'] = $member['member_id'];
 			$_SESSION['SESS_FIRST_NAME'] = $member['firstname'];
 			$_SESSION['SESS_LAST_NAME'] = $member['lastname'];
+			$_SESSION['SESS_LOGIN'] = $member['login'];
 			session_write_close();
 			}
 			
