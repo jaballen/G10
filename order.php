@@ -133,7 +133,7 @@
 				<h1>CUSTOM ORDERS</h1>
 				</div>
 				<div class="bcolumn1">
-                    <form name="orderForm" id="form" onsubmit="return ValidateForm()" action="http://webdevfoundations.net/scripts/formdemo.asp" method="post">
+                    <form name="orderForm" id="form" onsubmit="return ValidateForm()" action="order_thanks.php" method="post">
 						<h1>Order Form<span id="required" style="display: none">&nbsp;*Please fill in the highlighted field</span></h1>
 						<label for="firstname">FIRST NAME</label>
 						<input type="text" name="firstname" id="firstname" >
