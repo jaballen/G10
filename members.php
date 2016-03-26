@@ -1,6 +1,29 @@
 <?php
 	include 'functions.php';
 	session_start();
+	
+	$server = 'bcitdevcom.ipagemysql.com';
+	$username = 'comp15362014';
+	$password = '2014-1536';
+	$database = '1536forum';
+	
+	//Connect to mysql server
+	$conn= mysql_connect($server, $username, $password);	
+	if(!$conn) {
+		die('Failed to connect to server: ' . mysql_error());
+	}
+	
+	mysql_select_db($database, $conn);
+	$sel = mysql_select_db($database, $conn);
+	if(!$sel) {
+		die('Unable to select database');
+	}
+	
+	$points = "SELECT points FROM users WHERE login = '".$_SESSION['SESS_LOGIN']."'";
+	$getpoints = mysql_query($points);
+	$pointsarray = mysql_fetch_assoc($getpoints);	
+	//$p = $pointsarray['points'];
+	
 ?>
 <!DOCTYPE html>
 	<html lang="en">
@@ -54,10 +77,12 @@
 			<div id="content">
 				<h1>Members</h1>
 				<div class="bcolumn2">
-					<p>You have 34 REWARDS POINTS!</p>
+					<p>You have 
+					<?php echo $pointsarray['points']?>
+					 REWARDS POINTS!</p>
 					<p><a href="myaccount.php">My Account</a></p>
 					<br><br>
-					<div id="form">
+					<div id="form" action="points.php" method="post">
 						<h2>ENTER YOUR RECEIPT NUMBER TO GET YOUR POINTS!</h2>
 						<label for="receiptno">RECEIPT NUMBER</label>
 						<input type="text" name="receiptno" id="receiptno">
