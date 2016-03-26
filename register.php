@@ -45,27 +45,28 @@
 	$email = clean($_POST['email']);
 	//$phone = clean($_POST['phone']);
 	//$birthday = clean($_POST['birthday']);
-	$password = clean($_POST['password1']);
+	$password = md5(clean($_POST['password1']));
+
 	
 	$insert = "INSERT INTO members(firstname, lastname, login, passwd)
-	VALUES ('$fname', '$lname', '$email', '".md5($_POST['password'])."')";
+	VALUES ('$fname', '$lname', '$email', '$password')";
 	
 	@mysql_query($insert);
 	$result = mysql_query($insert);
 	if ($result) {
-		echo "New record created successfully";
+		//echo "New record created successfully";
+		header("Location:./reg_complete.php");
+		
 	} else {
 		echo "Error: ". mysql_error($conn);
 	}
 	
-	$result = @mysql_query($insert);
-	
-	//if($result) {
-	//	header("location: members.php");
-	//	exit();
-//	}else {
-	//	die("Query failed");
-	//}
+	if($result) {
+		header("Location:./login.php");
+		exit();
+	} else {
+		die("Query failed");
+	}
 	
 	
 ?>

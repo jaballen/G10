@@ -55,9 +55,14 @@
 		$num_matches= mysql_num_rows($result);
 		if ($num_matches > 0)
 			{
-			//matching row found authenticates user
 			$auth= true;
 			//echo "<br/>You are in!!<br/>";
+			session_regenerate_id();
+			$member = mysql_fetch_assoc($result);
+			$_SESSION['SESS_MEMBER_ID'] = $member['member_id'];
+			$_SESSION['SESS_FIRST_NAME'] = $member['firstname'];
+			$_SESSION['SESS_LAST_NAME'] = $member['lastname'];
+			session_write_close();
 			}
 			
 		if (!$auth)
