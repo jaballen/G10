@@ -15,8 +15,8 @@
             var useremail = document.getElementById('useremail');
             var useremailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
             var pword = document.getElementById('pword');
-            var pwordRegex = /^(?=.*\d)(?=.*[a-zA-Z]).{4,8}$/;
-
+            //var pwordRegex = /^(?=.*\d)(?=.*[a-zA-Z]).{4,8}$/;
+			var pwordRegex = /^(?=.*[a-zA-Z]).{4,8}$/;
             if (useremail.value == "") {
                 useremail.style.borderColor = "red";
                 document.getElementById("required").style.display = "inline";

@@ -22,7 +22,7 @@
 	}
 	
 	$email = clean($_POST['useremail']);
-	$pword = md5(clean($_REQUEST['pword']));
+	$pword = md5(clean($_POST['pword']));
 
 	$server = 'bcitdevcom.ipagemysql.com';
 	$username = 'comp15362014';
@@ -44,7 +44,7 @@
 		}
 		
 		//SQL query to find if this entered username/password is in the db
-		$sql = "SELECT * FROM members WHERE login = '$email' AND '".md5($_REQUEST['pword'])."'";
+		$sql = "SELECT * FROM members WHERE login = '$email'";// AND passwd = '$pword'";
 		
 		//mysql_query($sql);
 		
@@ -65,14 +65,11 @@
 			session_write_close();
 			}
 			
-		if (!$auth)
-			{
+		if (!$auth) {
 			echo 'You must enter a valid username & password.';
 			exit;
-			}
-		else
-			{
+		} else {
 			header("Location:./members.php");
 		exit();
-			}
+		}
 ?>

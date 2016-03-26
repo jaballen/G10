@@ -85,7 +85,8 @@
 			var password2 = document.getElementById('password2');
 			var match = document.getElementById('match');
 			var nomatch = document.getElementById('nomatch');
-			var pwordRegex = /^(?=.*\d)(?=.*[a-zA-Z]).[^\s]{4,8}$/;
+			//var pwordRegex = /^(?=.*\d)(?=.*[a-zA-Z]).[^\s]{4,8}$/;
+			var pwordRegex = /^(?=.*[a-zA-Z]).[^\s]{4,8}$/;
 			if (!password1.value.match(pwordRegex)) {
 				password1.style.borderColor = "red";
 				document.getElementById("required").style.display = "inline";

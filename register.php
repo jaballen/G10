@@ -45,11 +45,11 @@
 	$email = clean($_POST['email']);
 	//$phone = clean($_POST['phone']);
 	//$birthday = clean($_POST['birthday']);
-	$password = md5(clean($_POST['password1']));
+	$pword = clean($_POST['password2']);
 
 	
 	$insert = "INSERT INTO members(firstname, lastname, login, passwd)
-	VALUES ('$fname', '$lname', '$email', '$password')";
+	VALUES ('$fname', '$lname', '$email', '$pword')";
 	
 	@mysql_query($insert);
 	$result = mysql_query($insert);

@@ -5,81 +5,81 @@
 		<title>Cupcakes on a Cloud</title>
 		<link rel="stylesheet" type="text/css" href="Style/base.css">
 		<script>
-      function ValidateForm() {
-          var fn = document.getElementById('firstname');
-          var ln = document.getElementById('lastname');
-          var email = document.getElementById('email');
-          var emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
-          var phone = document.getElementById('phonenum');
-          var phoneRegex = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/;
-          var date = document.getElementById('eventdate');
-          var order = document.getElementById('orderdesc');
-          if (fn.value == "") {
-              fn.style.borderColor = "red";
-              document.getElementById("required").style.display = "inline";
-              return false;
-          } else {
-              fn.style.borderColor = "#ccc";
-              document.getElementById("required").style.display = "none";
-          }
-          if (ln.value == "") {
-              ln.style.borderColor = "red";
-              document.getElementById("required").style.display = "inline";
-              return false;
-          } else {
-              ln.style.borderColor = "#ccc";
-              document.getElementById("required").style.display = "none";
-          }
-          if (email.value == "") {
-              email.style.borderColor = "red";
-              document.getElementById("required").style.display = "inline";
-              return false;
-          } else {
-              email.style.borderColor = "#ccc";
-              document.getElementById("required").style.display = "none";
-          }
-          if (!email.value.match(emailRegex)) {
-              email.style.borderColor = "red";
-              document.getElementById("required").style.display = "inline";
-              document.getElementById("emailInvalid").style.display = "inline";
-              return false;
-          } else {
-              email.style.borderColor = "#ccc";
-              document.getElementById("required").style.display = "none";
-              document.getElementById("emailInvalid").style.display = "none";
-          }
-          if (phone.value == "") {
-              phone.style.borderColor = "red";
-              document.getElementById("required").style.display = "inline";
-              return false;
-          } else {
-              phone.style.borderColor = "#ccc";
-              document.getElementById("required").style.display = "none";
-          }
-          if (!phone.value.match(phoneRegex)) {
-              phone.style.borderColor = "red";
-              document.getElementById("required").style.display = "inline";
-              document.getElementById("phoneInvalid").style.display = "inline";
-              return false;
-          } else {
-              phone.style.borderColor = "#ccc";
-              document.getElementById("required").style.display = "none";
-              document.getElementById("phoneInvalid").style.display = "none";
-          }
-          if (date.value == null) {
-              date.style.borderColor = "red";
-              return false;
-          } else {
-              date.style.borderColor = "#ccc";
-          }
-          if (order.value == "") {
-              order.style.borderColor = "red";
-              return false;
-          } else {
-              order.style.borderColor = "#ccc";
-          }
-          return true;
-      }
+		function ValidateForm(){
+			var fn = document.getElementById('firstname');
+			var ln = document.getElementById('lastname');
+			var email = document.getElementById('email');
+			var emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+			var phone = document.getElementById('phonenum');
+			var phoneRegex = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/
+			var date = document.getElementById('eventdate');
+			var order = document.getElementById('orderdesc');
+			if(fn.value == ""){
+				fn.style.borderColor = "red";
+				document.getElementById("required").style.display = "inline";
+				return false;
+			} else {
+				fn.style.borderColor = "#ccc";
+				document.getElementById("required").style.display = "none";
+			}
+			if(ln.value == ""){
+				ln.style.borderColor = "red";
+				document.getElementById("required").style.display = "inline";
+				return false;
+			} else {
+				ln.style.borderColor = "#ccc";
+				document.getElementById("required").style.display = "none";
+			}
+			if(email.value == ""){
+				email.style.borderColor = "red";
+				document.getElementById("required").style.display = "inline";
+				return false;
+			} else {
+				email.style.borderColor = "#ccc";
+				document.getElementById("required").style.display = "none";
+			}
+			if (!email.value.match(emailRegex)) {
+				email.style.borderColor = "red";
+				document.getElementById("required").style.display = "inline";
+				document.getElementById("emailInvalid").style.display = "inline";
+				return false;
+			} else {
+				email.style.borderColor = "#ccc";
+				document.getElementById("required").style.display = "none";
+				document.getElementById("emailInvalid").style.display = "none";
+			}
+			if(phone.value == ""){
+				phone.style.borderColor = "red";
+				document.getElementById("required").style.display = "inline";
+				return false;
+			} else {
+				phone.style.borderColor = "#ccc";
+				document.getElementById("required").style.display = "none";
+			}
+			if (!phone.value.match(phoneRegex)) {
+				phone.style.borderColor = "red";
+				document.getElementById("required").style.display = "inline";
+				document.getElementById("phoneInvalid").style.display = "inline";
+				return false;
+			} else {
+				phone.style.borderColor = "#ccc";
+				document.getElementById("required").style.display = "none";
+				document.getElementById("phoneInvalid").style.display = "none";
+			}
+			if (date.value == null){
+				date.style.borderColor = "red";
+				return false;
+			} else {
+				date.style.borderColor = "#ccc";
+			}
+			if (order.value == ""){
+				order.style.borderColor = "red";
+				return false;
+			} else {
+				order.style.borderColor = "#ccc";
+			}
+			return true;
+		}
 		</script>
 	</head>
 	
