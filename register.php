@@ -13,6 +13,11 @@
 	$password = '2014-1536';
 	$database = '1536forum';
 	
+	//$server = 'mysql5.000webhost.com';
+	//$username = 'a3255775_db1';
+	//$password = 'bcitsql0';
+	//$database = 'a3255775_db1';
+	
 	//Connect to mysql server
 	$conn= mysql_connect($server, $username, $password);	
 	if(!$conn) {
@@ -35,17 +40,19 @@
 		return mysql_real_escape_string($str);	
 	}
 	
-	$firstname = clean($_POST['firstname']);
-	$lastname = clean($_POST['lastname']);
-	$email = $_POST['email'];
-	$phone = clean($_POST['phone']);
-	$birthday = clean($_POST['birthday']);
+	$fname = clean($_POST['firstname']);
+	$lname = clean($_POST['lastname']);
+	$email = clean($_POST['email']);
+	//$phone = clean($_POST['phone']);
+	//$birthday = clean($_POST['birthday']);
 	$password = clean($_POST['password1']);
 	
-	$insert = "INSERT INTO names (fname, lname, email) VALUES ($firstname, $lastname, $email)";
-	mysql_query($insert, $conn);
-	 
-	if (mysql_query($insert, $conn)) {
+	$insert = "INSERT INTO members(firstname, lastname, login, passwd)
+	VALUES ('$fname', '$lname', '$email', '".md5($_POST['password'])."')";
+	
+	@mysql_query($insert);
+	$result = mysql_query($insert);
+	if ($result) {
 		echo "New record created successfully";
 	} else {
 		echo "Error: ". mysql_error($conn);
