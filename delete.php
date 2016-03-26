@@ -13,11 +13,6 @@
 	$password = '2014-1536';
 	$database = '1536forum';
 	
-	//$server = 'mysql5.000webhost.com';
-	//$username = 'a3255775_db1';
-	//$password = 'bcitsql0';
-	//$database = 'a3255775_db1';
-	
 	//Connect to mysql server
 	$conn= mysql_connect($server, $username, $password);	
 	if(!$conn) {
@@ -40,32 +35,25 @@
 		return mysql_real_escape_string($str);	
 	}
 	
-	$fname = clean($_POST['firstname']);
-	$lname = clean($_POST['lastname']);
-	$email = clean($_POST['email']);
-	//$phone = clean($_POST['phone']);
-	//$birthday = clean($_POST['birthday']);
-	$pword = clean($_POST['password2']);
+	$email = clean($_POST['deregemail']);
+	$password = md5(clean($_POST['deregpword']));
 
 	
-	$insert = "INSERT INTO members(firstname, lastname, login, passwd)
-	VALUES ('$fname', '$lname', '$email', '$pword')";
+	$delete = "DELETE FROM members WHERE login = '$email' AND passwd = '$password'";
 	
-	@mysql_query($insert);
-	$result = mysql_query($insert);
+	@mysql_query($delete);
+	$result = mysql_query($delete);
 	if ($result) {
-		//echo "New record created successfully";
-		header("Location:./reg_complete.php");
-		
+		//echo "record deleted";
+		//Unset the variables stored in session
+		unset($_SESSION['SESS_MEMBER_ID']);
+		unset($_SESSION['SESS_FIRST_NAME']);
+		unset($_SESSION['SESS_LAST_NAME']);
+		session_write_close();
+		header("Location:./dereg_complete.php");
+		exit();		
 	} else {
 		echo "Error: ". mysql_error($conn);
-	}
-	
-	if($result) {
-		header("Location:./login.php");
-		exit();
-	} else {
-		die("Query failed");
 	}
 	
 	
