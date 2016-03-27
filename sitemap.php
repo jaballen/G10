@@ -32,17 +32,17 @@
 			<!-- div navigation -->
 			<div id="nav">
 				<ul>
-					<li><a href="index.php">Home</a></li>
-					<li><a href="about.php">About</a>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a>
 						<ul>
-							<li><a href="about.php">Our Story</a></li>
-							<li><a href="location_contact.php">Location</a></li>
+							<li><a href="about.html">Our Story</a></li>
+							<li><a href="location_contact.html">Location</a></li>
 						</ul>
 					</li>
-					<li><a href="gallery.php">Gallery</a></li>
-					<li><a href="order.php">Order</a></li>
-					<li><a href="menu.php">Menu</a></li>
-					<li><a href="rewards.php">Rewards</a>
+					<li><a href="gallery.html">Gallery</a></li>
+					<li><a href="order.html">Order</a></li>
+					<li><a href="menu.html">Menu</a></li>
+					<li><a href="rewards.html">Rewards</a>
 						<ul>
 						<?php if (isLoggedIn()) { 
 							echo '<li><a href="members.php">Member Area</a></li>';
@@ -57,15 +57,37 @@
 				
 			<!-- div content -->
 			<div id="content">
-				<h1>CUSTOM ORDERS</h1>
-                    <br>
-                <h2>THANK YOU FOR THE INQUIRY!<br>
-                WE'LL GET BACK TO YOU WITHIN 24 HOURS</h2>
-                </div>
-			
+				<div class="bcolumn1">
+					<div class="sitemap">
+					<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a>
+						<ul>
+							<li><a href="about.html">Our Story</a></li>
+							<li><a href="location_contact.html">Location</a></li>
+						</ul>
+					</li>
+					<li><a href="gallery.html">Gallery</a></li>
+					<li><a href="order.html">Order</a></li>
+					<li><a href="menu.html">Menu</a></li>
+					<li><a href="rewards.html">Rewards</a>
+						<ul>
+							<li><a href="login.html">Log In</a></li>
+							<li><a href="rewards.html">Sign Up</a></li>
+						</ul>
+					</li>
+					</ul>
+					</div>
+				</div>
+				<div class="bcolumn2">
+					<img src="Images/sitemapcupcake.jpg"
+					alt="Cupcake">
+				</div>
+			</div>
+
 			<!-- div footer -->
 			<div id="footer">
-				<p>© 2016 | Cupcakes on a Cloud | <a href="sitemap.php">Sitemap</a></p>
+				<p>© 2016 | Cupcakes on a Cloud | <a href="sitemap.html">Sitemap</a></p>
 				
 				<!-- div socialbuttons -->
 				<div class="socialbuttons">

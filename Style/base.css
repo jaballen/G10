@@ -4,6 +4,7 @@ body {
     background-color: #FCFFFD;
 }
 
+
 p {
 	font-family: "Century Gothic";
 	padding: 5px;
@@ -16,6 +17,8 @@ h1 {
 h2{
 	font-family: "Century Gothic";
 	text-align: center;
+    /*padding-top: 200px;
+    padding-bottom: 500px;*/
 }
 
 #wrapper {
@@ -25,8 +28,7 @@ h2{
 	height: 100%;
 	overflow: auto;
 }
-
-/* Header section for logo and location */
+		
 #header {
 	margin-left: auto;
 	margin-right: auto;
@@ -48,19 +50,6 @@ h2{
 	height: 190px;
 }
 
-/* Address appears within header */
-.address {
-	margin: 25px;
-	text-align: left;
-	font-size: smaller;
-	color: #80A1D4;
-	overflow: auto;
-	position: absolute;
-	right: 0;
-	top: 5px;
-}
-
-/* Content section for beneath navbar and above footer */
 #content { 
 	overflow: auto;
 	margin: auto;
@@ -189,6 +178,21 @@ h2{
 	padding-top: 5px;
 }
 
+.address {
+	margin-right: 25px;
+	text-align: left;
+	font-size: smaller;
+	color: #80A1D4;
+	overflow: auto;
+	position: absolute;
+	right: 0;
+	top: 0px;
+}
+#loggedin {
+	text-align: right;
+	font-size: x-small;
+	color: #0000cc;
+}
 /* drop down navigation bar with hover pseudoclass */	
 #nav {
 	height: 40px;
@@ -265,7 +269,7 @@ h2{
 	display: block;
 }
 
-/* Form style */
+/* form style */
 #form {
 	font-family: "Century Gothic";
 	border-radius: 5px;
@@ -319,7 +323,7 @@ input[type=submit] {
 	font-size: small;
 }
 
-/* Centers a div within content div */
+/* Centers div */
 #centering {
 	float: none;
 	margin: auto;
@@ -327,7 +331,6 @@ input[type=submit] {
 	border: 4px double #B3BFB8;
 }
 
-/* Styling for the menu */
 .menu {
 	border: 4px double #B3BFB8;
 }

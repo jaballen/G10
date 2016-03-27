@@ -1,26 +1,16 @@
 <?php
 	//Start session
 	session_start();
-
-	//Array to store validation errors
-	$errmsg_arr = array();
-	
-	//Validation error flag
-	$errflag = false;
-	
-	$server = 'bcitdevcom.ipagemysql.com';
-	$username = 'comp15362014';
-	$password = '2014-1536';
-	$database = '1536forum';
+	require_once('config.php');
 	
 	//Connect to mysql server
-	$conn= mysql_connect($server, $username, $password);	
+	$conn = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);	
 	if(!$conn) {
 		die('Failed to connect to server: ' . mysql_error());
 	}
 	
-	mysql_select_db($database, $conn);
-	$sel = mysql_select_db($database, $conn);
+	mysql_select_db(DB_DATABASE, $conn);
+	$sel = mysql_select_db(DB_DATABASE, $conn);
 	if(!$sel) {
 		die('Unable to select database');
 	}
@@ -34,30 +24,30 @@
 		return mysql_real_escape_string($str);	
 	}
 	
-	$receipt = clean($_POST['receiptno']);
-
-	$updaterec = "UPDATE receipts SET count='1' WHERE number = '$receipt'";
-	@mysql_query($updaterec);
-	$update = mysql_query($updaterec);
-	$updatearray = mysql_fetch_assoc($update);	
-	$count = $updatearray['count'];
-	
-	if ($count = 1) { //checks if they've redeemed already. if so, $count will be > 1. count initialized to 0. 	
-		$points = "SELECT points FROM receipts WHERE number = '$receipt'";	
-		//@mysql_query($points);
+		$receipt = clean($_POST['receiptno']);
 		
-		$getpoints = mysql_query($points);
-		$pointsarray = mysql_fetch_assoc($getpoints);
-		$p = $pointsarray['points'];
+		$getcount = "SELECT count FROM receipts WHERE number = '$receipt'";
+		$get = mysql_query($getcount) or die('Unable to get count');
+		$getarray = mysql_fetch_assoc($get);	
+		$count = $getarray['count'];
 		
-		$setpoints = "UPDATE users SET points=points+ '$p' WHERE number = '$receipt'";
-		@mysql_query($setpoints);
+	if ($count == 0) { //checks if they've redeemed already. if so, $count will be > 1. count initialized to 0. 	
+		$value = "SELECT value FROM receipts WHERE number = '$receipt'";			
+		$getvalue = mysql_query($value);
+		$valuearray = mysql_fetch_assoc($getvalue);
+		$p = $valuearray['value'];
 		
+		$updaterec = "UPDATE receipts SET count=count+'1' WHERE number = '$receipt'";
+		$update = mysql_query($updaterec);
+		@mysql_query($updaterec) or die('Unable to select update receipt');
+		
+		$sessemail = $_SESSION['SESS_LOGIN'];
+		$setpoints = "UPDATE members SET points=points+ '$p' WHERE email = '$sessemail'" ;
+		@mysql_query($setpoints) or die('Unable to select update points');	
 		header("Location:./members.php");
 		exit();
 	} else {
 		echo "Already redeemed points";
 	}
-	
-	
+
 ?>

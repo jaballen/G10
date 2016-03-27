@@ -1,28 +1,22 @@
 <?php
 	include 'functions.php';
 	session_start();
+	require_once('config.php');
 	
-	$server = 'bcitdevcom.ipagemysql.com';
-	$username = 'comp15362014';
-	$password = '2014-1536';
-	$database = '1536forum';
-	
-	//Connect to mysql server
-	$conn= mysql_connect($server, $username, $password);	
+	$conn = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);	
 	if(!$conn) {
 		die('Failed to connect to server: ' . mysql_error());
 	}
 	
-	mysql_select_db($database, $conn);
-	$sel = mysql_select_db($database, $conn);
+	mysql_select_db(DB_DATABASE, $conn);
+	$sel = mysql_select_db(DB_DATABASE, $conn);
 	if(!$sel) {
 		die('Unable to select database');
 	}
 	
-	$points = "SELECT points FROM users WHERE login = '".$_SESSION['SESS_LOGIN']."'";
+	$points = "SELECT points FROM members WHERE email = '".$_SESSION['SESS_LOGIN']."'";
 	$getpoints = mysql_query($points);
 	$pointsarray = mysql_fetch_assoc($getpoints);	
-	//$p = $pointsarray['points'];
 	
 ?>
 <!DOCTYPE html>
@@ -46,7 +40,7 @@
 				<p>1154 Robson St<br>Vancouver, BC<br>V6E 1B5<br>(778)123-4567<br><br>OPEN 10:00 - 8:00<br>CLOSED WEDNESDAYS</p>	
 				<?php
 						if (isLoggedIn()){
-							echo '<p id="loggedin">Hello, '.$_SESSION['SESS_LAST_NAME'].' <br/> <a href="./logout.php">Logout</a><br/></p>';
+							echo '<p id="loggedin">Hello, '.$_SESSION['SESS_FIRST_NAME'].' <br/> <a href="./logout.php">Logout</a><br/></p>';
 						} 
 				?>					
 				</div>			
@@ -67,7 +61,12 @@
 					<li><a href="menu.php">Menu</a></li>
 					<li><a class="active" href="rewards.php">Rewards</a>
 						<ul>
-							<li><a href="myaccount.php">My Account</a></li>
+						<?php if (isLoggedIn()) { 
+							echo '<li><a href="members.php">Member Area</a></li>';
+							} else {							
+							echo '<li><a href="login.php">Log In</a></li>';
+							echo '<li><a href="rewards.php">Sign Up</a></li>';
+						} ?>
 						</ul>
 					</li>
 				</ul>
@@ -82,12 +81,14 @@
 					 REWARDS POINTS!</p>
 					<p><a href="myaccount.php">My Account</a></p>
 					<br><br>
-					<div id="form" action="points.php" method="post">
+					<form id="form" action="points.php" method="post">
 						<h2>ENTER YOUR RECEIPT NUMBER TO GET YOUR POINTS!</h2>
+						
 						<label for="receiptno">RECEIPT NUMBER</label>
 						<input type="text" name="receiptno" id="receiptno">
-						<input id="mySubmit" type="submit" value="Submit">
-					</div>
+						<br>
+						<input type="submit">
+					</form>
 				</div>
 			</div>
 

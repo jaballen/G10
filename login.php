@@ -15,8 +15,7 @@
             var useremail = document.getElementById('useremail');
             var useremailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
             var pword = document.getElementById('pword');
-            //var pwordRegex = /^(?=.*\d)(?=.*[a-zA-Z]).{4,8}$/;
-			var pwordRegex = /^(?=.*[a-zA-Z]).{4,8}$/;
+            var pwordRegex = /^(?=.*\d)(?=.*[a-zA-Z]).{4,8}$/;
             if (useremail.value == "") {
                 useremail.style.borderColor = "red";
                 document.getElementById("required").style.display = "inline";
@@ -74,7 +73,7 @@
 				<p>1154 Robson St<br>Vancouver, BC<br>V6E 1B5<br>(778)123-4567<br><br>OPEN 10:00 - 8:00<br>CLOSED WEDNESDAYS</p>
 				<?php
 						if (isLoggedIn()){
-							echo '<p id="loggedin">Hello, '.$_SESSION['SESS_LAST_NAME'].' <br/> <a href="./logout.php">Logout</a><br/></p>';
+							echo '<p id="loggedin">Hello, '.$_SESSION['SESS_FIRST_NAME'].' <br/> <a href="./logout.php">Logout</a><br/></p>';
 						} 
 				?>					
 				</div>

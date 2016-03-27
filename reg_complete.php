@@ -39,8 +39,12 @@
 					<li><a href="menu.php">Menu</a></li>
 					<li><a href="rewards.php">Rewards</a>
 						<ul>
-							<li><a href="login.php">Log In</a></li>
-							<li><a href="rewards.php">Sign Up</a></li>
+						<?php if (isLoggedIn()) { 
+							echo '<li><a href="members.php">Member Area</a></li>';
+							} else {							
+							echo '<li><a href="login.php">Log In</a></li>';
+							echo '<li><a href="rewards.php">Sign Up</a></li>';
+						} ?>
 						</ul>
 					</li>
 				</ul>
