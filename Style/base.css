@@ -326,7 +326,7 @@ input[type=submit] {
 #pwInvalid {
 	display: none;
 	color: red;
-	font-size: small;
+	font-size: .65em;
 }
 
 /* Centers div */
