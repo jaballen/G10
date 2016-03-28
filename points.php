@@ -1,21 +1,17 @@
 <?php
-	//Start session
 	session_start();
 	require_once('config.php');
 	
-	//Connect to mysql server
 	$conn = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);	
 	if(!$conn) {
 		die('Failed to connect to server: ' . mysql_error());
 	}
 	
-	mysql_select_db(DB_DATABASE, $conn);
 	$sel = mysql_select_db(DB_DATABASE, $conn);
 	if(!$sel) {
 		die('Unable to select database');
 	}
-	
-	//Function to sanitize values received from the form. Prevents SQL injection
+
 	function clean($str) {
 		$str = @trim($str);
 		if(get_magic_quotes_gpc()) {
@@ -31,7 +27,8 @@
 		$getarray = mysql_fetch_assoc($get);	
 		$count = $getarray['count'];
 		
-	if ($count == 0) { //checks if they've redeemed already. if so, $count will be > 1. count initialized to 0. 	
+	//checks if they've redeemed already. if so, $count will be > 1. count initialized to 0 in database. 		
+	if ($count == 0) { 
 		$value = "SELECT value FROM receipts WHERE number = '$receipt'";			
 		$getvalue = mysql_query($value);
 		$valuearray = mysql_fetch_assoc($getvalue);
@@ -48,6 +45,7 @@
 		exit();
 	} else {
 		echo "Already redeemed points";
+		exit();
 	}
 
 ?>

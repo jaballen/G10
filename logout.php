@@ -7,7 +7,6 @@
 		die('Failed to connect to server: ' . mysql_error());
 	}
 	
-	mysql_select_db(DB_DATABASE, $conn);
 	$sel = mysql_select_db(DB_DATABASE, $conn);
 	if(!$sel) {
 		die('Unable to select database');

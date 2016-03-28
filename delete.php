@@ -1,5 +1,4 @@
 <?php
-
 	session_start();
 	require_once('config.php');
 
@@ -8,7 +7,6 @@
 		die('Failed to connect to server: ' . mysql_error());
 	}
 	
-	mysql_select_db(DB_DATABASE, $conn);
 	$sel = mysql_select_db(DB_DATABASE, $conn);
 	if(!$sel) {
 		die('Unable to select database');
@@ -22,14 +20,16 @@
 		return mysql_real_escape_string($str);	
 	}
 	
-	$email = clean($_POST['deregemail']);
 	$password = clean($_POST['deregpword']);
 
-	$delete = "DELETE FROM members WHERE email = '$email' AND password = '$password'";
-	
-	@mysql_query($delete);
-	$result = mysql_query($delete);
-	if ($result) {
+	$delete = "DELETE FROM members WHERE email = '".$_SESSION['SESS_LOGIN']."' AND password = '$password'";
+	$select = "SELECT * FROM members WHERE email = '".$_SESSION['SESS_LOGIN']."' AND password = '$password'";
+
+	$result = mysql_query($select);
+	$num_matches= mysql_num_rows($result);
+		
+	if ($num_matches == 1) {
+		@mysql_query($delete);
 		unset($_SESSION['SESS_MEMBER_ID']);
 		unset($_SESSION['SESS_FIRST_NAME']);
 		unset($_SESSION['SESS_LAST_NAME']);
@@ -37,7 +37,8 @@
 		header("Location:./dereg_complete.php");
 		exit();		
 	} else {
-		echo "Error: ". mysql_error($conn);
+		echo 'Password is incorrect';
+		exit();
 	}
 	
 ?>

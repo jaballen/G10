@@ -1,15 +1,6 @@
 <?php
-
 	session_start();
 	require_once('config.php');
-	
-//	function clean($str) {
-//		$str = @trim($str);
-//		if(get_magic_quotes_gpc()) {
-//			$str = stripslashes($str);
-//		}
-//		return mysql_real_escape_string($str);	
-//	}
 	
 	$email = $_POST['useremail'];
 	$pword = $_POST['pword'];
@@ -21,7 +12,6 @@
 			die('Failed to connect to server: ' . mysql_error());
 		}
 		
-		mysql_select_db(DB_DATABASE, $conn);
 		$sel = mysql_select_db(DB_DATABASE, $conn);
 		if(!$sel) {
 			die('Unable to select database');
@@ -31,9 +21,8 @@
 		$result = mysql_query($sql) or die('Unable to connect.');
 		
 		$num_matches= mysql_num_rows($result);
-		if ($num_matches > 0)
+		if ($num_matches == 1)
 			{
-			$auth= true;
 			session_regenerate_id();
 			$member = mysql_fetch_assoc($result);
 			$_SESSION['SESS_MEMBER_ID'] = $member['id'];
@@ -43,8 +32,8 @@
 			session_write_close();
 			header("Location:./members.php");
 		} else {
-			echo 'You must enter a valid username & password.';
-			exit;
+			echo 'Email and password do not match.';
+			exit();
 			}
 		}
 ?>

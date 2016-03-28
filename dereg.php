@@ -81,10 +81,6 @@
 					<div id ="form">
 					<form id="form" onsubmit="return DeRegForm()" action="delete.php" method="post">
 						<h1>Are you sure you want to delete your account?<span id="required" style="display: none"><br>&nbsp;*PLEASE ENTER YOUR PASSWORD TWICE</span></h1>
-						<label for="deregemail">Please enter your email:</label>
-                        <br>
-						<input type="text" name="deregemail" id="deregemail">
-                        <br>
 						<label for="password">Please enter your password:</label>
                         <br>
 						<input type="password" name="deregpword" id="deregpword">
