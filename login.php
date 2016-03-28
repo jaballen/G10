@@ -107,13 +107,22 @@
 				<div class="bcolumn1" id="centering">
 					<form id="form" onsubmit="return LoginForm()" action="auth.php" method="post">
 						<h1>LOG IN<span id="required" style="display: none">&nbsp;*Please fill in the highlighted field</span></h1>
+						<?php
+							if( isset($_SESSION['ERRMSG_ARR']) && is_array($_SESSION['ERRMSG_ARR']) && count($_SESSION['ERRMSG_ARR']) >0 ) {
+								foreach($_SESSION['ERRMSG_ARR'] as $msg) {
+									echo '<p id="errmsg">',$msg,'</p>'; 
+								}
+								unset($_SESSION['ERRMSG_ARR']);
+							}
+						?>							
+						
 						<label for="useremail">EMAIL<span id="emailInvalid" style="display: none">&nbsp;Please enter a valid email login</span></label>
 						<input type="text" name="useremail" id="useremail">
                         <label for="pword">PASSWORD<span id="invalid1" style="display: none">&nbsp;<br>Please enter your password</span></label>
                         <br>
                         <input type="password" name="pword" id="pword">
 						<br>
-						<input type="Submit">
+						<input type="Submit">					
 					</form>
 				</div>
 			</div>	

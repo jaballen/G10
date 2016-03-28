@@ -2,6 +2,9 @@
 	session_start();
 	require_once('config.php');
 	
+	//Array to store validation errors
+	$errmsg_arr = array();
+	
 	$conn = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);	
 	if(!$conn) {
 		die('Failed to connect to server: ' . mysql_error());
@@ -44,8 +47,10 @@
 		header("Location:./members.php");
 		exit();
 	} else {
-		echo "Already redeemed points";
-		exit();
+		$errmsg_arr[] = 'Already redeemed points.';
+		$_SESSION['ERRMSG_ARR'] = $errmsg_arr;
+		header("Location: ./members.php");
+		exit();		
 	}
 
 ?>

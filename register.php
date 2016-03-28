@@ -2,6 +2,9 @@
 	session_start();
 	require_once('config.php');
 	
+	//Array to store validation errors
+	$errmsg_arr = array();
+	
 	$conn = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);	
 	if(!$conn) {
 		die('Failed to connect to server: ' . mysql_error());
@@ -46,7 +49,9 @@
 			exit();
 		}
 	} else {
-		echo 'Already registered';
-		exit();
+		$errmsg_arr[] = 'Already registered.';
+		$_SESSION['ERRMSG_ARR'] = $errmsg_arr;
+		header("Location: ./rewards.php");
+		exit();	
 	}
 ?>

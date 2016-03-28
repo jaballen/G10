@@ -2,6 +2,9 @@
 	session_start();
 	require_once('config.php');
 	
+	//Array to store validation errors
+	$errmsg_arr = array();
+	
 	$email = $_POST['useremail'];
 	$pword = $_POST['pword'];
 
@@ -32,7 +35,9 @@
 			session_write_close();
 			header("Location:./members.php");
 		} else {
-			echo 'Email and password do not match.';
+			$errmsg_arr[] = 'Login failed. Email and password do not match.';
+			$_SESSION['ERRMSG_ARR'] = $errmsg_arr;
+			header("Location: ./login.php");
 			exit();
 			}
 		}

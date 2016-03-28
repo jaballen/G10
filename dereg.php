@@ -81,6 +81,14 @@
 					<div id ="form">
 					<form id="form" onsubmit="return DeRegForm()" action="delete.php" method="post">
 						<h1>Are you sure you want to delete your account?<span id="required" style="display: none"><br>&nbsp;*PLEASE ENTER YOUR PASSWORD TWICE</span></h1>
+							<?php
+								if( isset($_SESSION['ERRMSG_ARR']) && is_array($_SESSION['ERRMSG_ARR']) && count($_SESSION['ERRMSG_ARR']) >0 ) {
+									foreach($_SESSION['ERRMSG_ARR'] as $msg) {
+										echo '<p id="errmsg">',$msg,'</p>'; 
+									}
+									unset($_SESSION['ERRMSG_ARR']);
+								}
+							?>						
 						<label for="password">Please enter your password:</label>
                         <br>
 						<input type="password" name="deregpword" id="deregpword">

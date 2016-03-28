@@ -179,6 +179,14 @@
 				<div class="bcolumn2">
 					<form id="form" onsubmit="return ValidateForm()" action="register.php" method="post">
 						<h1>SIGN UP<span id="required" style="display: none">&nbsp;*Please fill in the highlighted field</span></h1>
+							<?php
+								if( isset($_SESSION['ERRMSG_ARR']) && is_array($_SESSION['ERRMSG_ARR']) && count($_SESSION['ERRMSG_ARR']) >0 ) {
+									foreach($_SESSION['ERRMSG_ARR'] as $msg) {
+										echo '<p id="errmsg">',$msg,'</p>'; 
+									}
+									unset($_SESSION['ERRMSG_ARR']);
+								}
+							?>												
 						<label for="firstname">FIRST NAME</label>
 						<input type="text" id="firstname" name="firstname">
 						<br>

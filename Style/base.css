@@ -329,6 +329,11 @@ input[type=submit] {
 	font-size: .65em;
 }
 
+#errmsg {
+	color: #ff0000;
+	font-weight: 900;
+}
+
 /* Centers div */
 #centering {
 	float: none;

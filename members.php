@@ -83,7 +83,14 @@
 					<br><br>
 					<form id="form" action="points.php" method="post">
 						<h2>ENTER YOUR RECEIPT NUMBER TO GET YOUR POINTS!</h2>
-						
+							<?php
+								if( isset($_SESSION['ERRMSG_ARR']) && is_array($_SESSION['ERRMSG_ARR']) && count($_SESSION['ERRMSG_ARR']) >0 ) {
+									foreach($_SESSION['ERRMSG_ARR'] as $msg) {
+										echo '<p id="errmsg">',$msg,'</p>'; 
+									}
+									unset($_SESSION['ERRMSG_ARR']);
+								}
+							?>						
 						<label for="receiptno">RECEIPT NUMBER</label>
 						<input type="text" name="receiptno" id="receiptno">
 						<br>

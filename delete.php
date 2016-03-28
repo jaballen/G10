@@ -1,6 +1,9 @@
 <?php
 	session_start();
 	require_once('config.php');
+	
+	//Array to store validation errors
+	$errmsg_arr = array();
 
 	$conn = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);	
 	if(!$conn) {
@@ -37,8 +40,10 @@
 		header("Location:./dereg_complete.php");
 		exit();		
 	} else {
-		echo 'Password is incorrect';
-		exit();
+		$errmsg_arr[] = 'Password is incorrect.';
+		$_SESSION['ERRMSG_ARR'] = $errmsg_arr;
+		header("Location: ./dereg.php");
+		exit();		
 	}
 	
 ?>
