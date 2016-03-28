@@ -84,11 +84,13 @@
 			if (!password1.value.match(pwordRegex)) {
 				password1.style.borderColor = "red";
 				document.getElementById("required").style.display = "inline";
-				match.innerHTML = "  Password too weak";
+				match.innerHTML = " Password must be between 4 to 8 characters &nbsp &nbsp long and include at least one numeric digit";
 				nomatch.innerHTML = " ";
+				document.getElementById("pwInvalid").style.display = "inline";
 				testPass = false;
 			} else {
 				password1.style.borderColor = "#ccc";
+				document.getElementById("pwInvalid").style.display = "none";
 				match.innerHTML = "  Password is valid";
 				testPass = true;
 			}
@@ -180,14 +182,21 @@
 						<br>
 						<input type="date" id="birthday" name="bday">
 						<br>
+<<<<<<< HEAD
+                        <br>
 						<label for="password">PASSWORD</label>
+=======
+						<label for="password">PASSWORD<span id="pwInvalid" style="display: none">&nbsp;Must be 4-8 characters, with at least one digit, and one uppercase letter</span></label>
+>>>>>>> 1972ad08127ba746a8d334652069379982442940
 						<br>
-						<input type="password" id="password1" name="password" onblur="ValidateForm()"><span id="match"></span>
+					    <input type="password" id="password1" name="password1" onblur="ValidateForm()"><br><span id="match"></span>
+                        <br>
 						<br>
 						<label for="password">CONFIRM PASSWORD</label>
 						<br>
-						<input type="password" id="password2" name="password" onblur="ValidateForm()"><span id="nomatch"></span>
+						<input type="password" id="password2" name="password2" onblur="ValidateForm()"><span id="nomatch"></span>
 						<br>
+                        <br>
 						<input type="submit">
 						<br>
 						<a href="login.html">Already a member?</a>

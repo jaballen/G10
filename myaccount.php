@@ -23,7 +23,7 @@
 				<p>1154 Robson St<br>Vancouver, BC<br>V6E 1B5<br>(778)123-4567<br><br>OPEN 10:00 - 8:00<br>CLOSED WEDNESDAYS</p>
 				<?php
 						if (isLoggedIn()){
-							echo '<p id="loggedin">Hello, '.$_SESSION['SESS_FIRST_NAME'].' <br/> <a href="./logout.php">Logout</a><br/></p>';
+							echo '<p id="loggedin">Hello, '.$_SESSION['SESS_LAST_NAME'].' <br/> <a href="./logout.php">Logout</a><br/></p>';
 						} 
 				?>				
 				</div>
@@ -43,12 +43,7 @@
 					<li><a href="menu.php">Menu</a></li>
 					<li><a class="active" href="rewards.php">Rewards</a>
 						<ul>
-						<?php if (isLoggedIn()) { 
-							echo '<li><a href="members.php">Member Area</a></li>';
-							} else {							
-							echo '<li><a href="login.php">Log In</a></li>';
-							echo '<li><a href="rewards.php">Sign Up</a></li>';
-						} ?>
+							<li><a href="myaccount.php">My Account</a></li>
 						</ul>
 					</li>
 				</ul>
