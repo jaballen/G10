@@ -98,7 +98,7 @@
 				testPass = true;
 			}
 			if (password1.value != password2.value || (password2.value == "" && password1.value == "")) {
-				nomatch.innerHTML = "  Passwords do not match";
+				nomatch.innerHTML = " Password must be between 4 to 8 characters &nbsp &nbsp long and include at least one numeric digit";
 				document.getElementById("required").style.display = "inline";
 				testPass = false;
 			} else if (password1.value.match(pwordRegex) && password1.value == password2.value) {
@@ -194,14 +194,18 @@
 						<br>
 						<input type="date" id="birthday" name="bday">
 						<br>
+                        <br>
 						<label for="password">PASSWORD</label>
+						<label for="password">PASSWORD<span id="pwInvalid" style="display: none">&nbsp;Must be 4-8 characters, with at least one digit, and one uppercase letter</span></label>
 						<br>
-						<input type="password" id="password1" name="password1" onblur="ValidateForm()"><span id="match"></span>
+					    <input type="password" id="password1" name="password1" onblur="ValidateForm()"><br><span id="match"></span>
+                        <br>
 						<br>
 						<label for="password">CONFIRM PASSWORD</label>
 						<br>
 						<input type="password" id="password2" name="password2" onblur="ValidateForm()"><span id="nomatch"></span>
 						<br>
+                        <br>
 						<input type="submit">
 						<br>
 						<a href="login.php">Already a member?</a>
