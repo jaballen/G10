@@ -65,8 +65,7 @@
 				</div>
 				<div class="bcolumn2">
 				 <h2>Our Story</h2>
-				 <p>Cupcakes on a Cloud is a bakery serving specialty cupcakes. One bite of our cupcakes will blow you away. We are committed to using fresh, local ingredients. Here at the shop we believe in small batch baking and providing top quality sweets with no shortcuts or artificial flavoring and our open kitchen concept allows visitors to watch our staff at work. Whether piping away on a tray of cupcakes or creating a batch of our famous Cloud Cupcakes, the shop is both a delight for the young and old.</p>
-                 <p>So whether a birthday, a dinner party, a wedding or shower, let us help you cater your next special event.</p>
+				 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris eget neque at sem venenatis eleifend. Ut nonummy. Fusce aliquet pede non pede. Suspendisse dapibus lorem pellentesque magna. Integer nulla. Donec blandit feugiat ligula.</p>
 				</div>
 			</div>
 			

@@ -89,7 +89,7 @@
 			if (!password1.value.match(pwordRegex)) {
 				password1.style.borderColor = "red";
 				document.getElementById("required").style.display = "inline";
-				match.innerHTML = " Password must be between 4 to 8 characters &nbsp &nbsp long and include at least one numeric digit";
+				match.innerHTML = "  Password too weak";
 				nomatch.innerHTML = " ";
 				testPass = false;
 			} else {
@@ -194,17 +194,14 @@
 						<br>
 						<input type="date" id="birthday" name="bday">
 						<br>
-                        <br>
 						<label for="password">PASSWORD</label>
 						<br>
-					    <input type="password" id="password1" name="password1" onblur="ValidateForm()"><br><span id="match"></span>
-                        <br>
+						<input type="password" id="password1" name="password1" onblur="ValidateForm()"><span id="match"></span>
 						<br>
 						<label for="password">CONFIRM PASSWORD</label>
 						<br>
 						<input type="password" id="password2" name="password2" onblur="ValidateForm()"><span id="nomatch"></span>
 						<br>
-                        <br>
 						<input type="submit">
 						<br>
 						<a href="login.php">Already a member?</a>
