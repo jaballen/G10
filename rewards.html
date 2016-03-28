@@ -84,11 +84,11 @@
 			if (!password1.value.match(pwordRegex)) {
 				password1.style.borderColor = "red";
 				document.getElementById("required").style.display = "inline";
-				match.innerHTML = "  Password too weak";
-				nomatch.innerHTML = " ";
+				document.getElementById("pwInvalid").style.display = "inline";
 				testPass = false;
 			} else {
 				password1.style.borderColor = "#ccc";
+				document.getElementById("pwInvalid").style.display = "none";
 				match.innerHTML = "  Password is valid";
 				testPass = true;
 			}
@@ -180,7 +180,7 @@
 						<br>
 						<input type="date" id="birthday" name="bday">
 						<br>
-						<label for="password">PASSWORD</label>
+						<label for="password">PASSWORD<span id="pwInvalid" style="display: none">&nbsp;Must be 4-8 characters, with at least one digit, and one uppercase letter</span></label>
 						<br>
 						<input type="password" id="password1" name="password" onblur="ValidateForm()"><span id="match"></span>
 						<br>
