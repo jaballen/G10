@@ -89,7 +89,7 @@
 			if (!password1.value.match(pwordRegex)) {
 				password1.style.borderColor = "red";
 				document.getElementById("required").style.display = "inline";
-				match.innerHTML = " Password must be between 4 to 8 characters &nbsp &nbsp long and include at least one numeric digit";
+				match.innerHTML = "  Password too weak";
 				nomatch.innerHTML = " ";
 				testPass = false;
 			} else {
@@ -98,7 +98,7 @@
 				testPass = true;
 			}
 			if (password1.value != password2.value || (password2.value == "" && password1.value == "")) {
-				nomatch.innerHTML = "  Passwords do not match";
+				nomatch.innerHTML = " Password must be between 4 to 8 characters &nbsp &nbsp long and include at least one numeric digit";
 				document.getElementById("required").style.display = "inline";
 				testPass = false;
 			} else if (password1.value.match(pwordRegex) && password1.value == password2.value) {
@@ -196,6 +196,7 @@
 						<br>
                         <br>
 						<label for="password">PASSWORD</label>
+						<label for="password">PASSWORD<span id="pwInvalid" style="display: none">&nbsp;Must be 4-8 characters, with at least one digit, and one uppercase letter</span></label>
 						<br>
 					    <input type="password" id="password1" name="password1" onblur="ValidateForm()"><br><span id="match"></span>
                         <br>

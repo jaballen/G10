@@ -26,18 +26,27 @@
 	$phone = clean($_POST['phonenum']);
 	$birthday = clean($_POST['bday']);
 	$pword = clean($_POST['password1']);
-
-	$insert = "INSERT INTO members(firstname, lastname, email, phone, birthday,
-	password, points)
-	VALUES ('$fname', '$lname', '$email', '$phone', '$birthday', '$pword', '0')";
 	
-	$result = mysql_query($insert);
-	if ($result) {
-		header("Location:./reg_complete.php");
-		exit();
+	$sql = "SELECT * FROM members WHERE email = '$email'";
+	$result = mysql_query($sql);
+	$num_matches= mysql_num_rows($result);
+	
+	if ($num_matches == 0) {
+
+		$insert = "INSERT INTO members(firstname, lastname, email, phone, birthday,
+		password, points)
+		VALUES ('$fname', '$lname', '$email', '$phone', '$birthday', '$pword', '0')";
+		
+		$result = mysql_query($insert);
+		if ($result) {
+			header("Location:./reg_complete.php");
+			exit();
+		} else {
+			echo "Error: ". mysql_error($conn);
+			exit();
+		}
 	} else {
-		echo "Error: ". mysql_error($conn);
+		echo 'Already registered';
 		exit();
 	}
-	
 ?>
