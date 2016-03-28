@@ -37,6 +37,7 @@
 		exit();
 	} else {
 		echo "Error: ". mysql_error($conn);
+		exit();
 	}
 	
 ?>
