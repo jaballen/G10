@@ -1,6 +1,23 @@
 <?php
 	include 'functions.php';
 	session_start();
+	require_once('config.php');
+	
+	$conn = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);	
+	if(!$conn) {
+		die('Failed to connect to server: ' . mysql_error());
+	}
+	
+	mysql_select_db(DB_DATABASE, $conn);
+	$sel = mysql_select_db(DB_DATABASE, $conn);
+	if(!$sel) {
+		die('Unable to select database');
+	}
+	
+	$sql = "SELECT * FROM members WHERE email = '".$_SESSION['SESS_LOGIN']."'";
+	$getinfo = mysql_query($sql);
+	$infoarray = mysql_fetch_assoc($getinfo);	
+	
 ?>
 <!DOCTYPE html>
 	<html lang="en">
@@ -63,27 +80,27 @@
 					<table class="hours">
 						<tr>
 							<td>FIRST NAME</td>
-							<td>John</td>
+							<td><?php echo $infoarray['firstname'] ?></td>
 						</tr>
 						<tr>
 							<td>LAST NAME</td>
-							<td>Smith</td>
+							<td><?php echo $infoarray['lastname'] ?></td>
 						</tr>
 						<tr>
 							<td>EMAIL</td>
-							<td>jsmith@coldmail.com</td>
+							<td><?php echo $infoarray['email'] ?></td>
 						</tr>
 						<tr>
 							<td>PHONE NUMBER</td>
-							<td>6041121121</td>
+							<td><?php echo $infoarray['phone'] ?></td>
 						</tr>
 						<tr>
 							<td>BIRTHDAY</td>
-							<td>01/01/1991</td>
+							<td><?php echo $infoarray['birthday'] ?></td>
 						</tr>
 						<tr>
 							<td>REWARDS POINTS</td>
-							<td>34</td>
+							<td><?php echo $infoarray['points'] ?></td>
 						</tr>
 					</table>
 					<br>

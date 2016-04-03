@@ -165,16 +165,24 @@
 			<div id="content">
 				<div class="row1">
 				<h1>REWARDS</h1>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est.</p>
+				<p>Do you have your receipts? We like to reward our loyal customers with our reward points program.
+					Sign up today to get started!</p>
+				<p>All you need to do is enter your receipt number in your member area page and accumulate points. You can use your points to redeem
+				free cupcakes in-store. In addition, by becoming a member, you also have access to many member benefits!</p>
 				</div>
 				<div class="bcolumn1">
 				<h1>MEMBER BENEFITS</h1>
 					<ul>
 						<li>Free Cupcake on your birthday</li>
-						<li>Save points for special promotions</li>
-						<li>Special Members Only events and coupons</li>
-						<li>So much more...</li>
-					</ul>
+						<li>Redeem points to get free cupcakes</li>
+						<li>Special Members Only events, like new cupcake tasting</li>						
+						<li>Receive our newsletter on our sales, promos, and new cupcake creations</li>
+					</ul>	
+				<h1>REDEEMING POINTS</h1>
+					<ul>
+						<li>Receive 1 Free Cupcake for every <b>100 points</b> you accumulate</li>
+						<li>Points can be used for special promotions, so watch out for them!</li>
+					</ul>						
 				</div>
 				<div class="bcolumn2">
 					<form id="form" onsubmit="return ValidateForm()" action="register.php" method="post">

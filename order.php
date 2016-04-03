@@ -137,7 +137,7 @@
 				<h1>CUSTOM ORDERS</h1>
 				</div>
 				<div class="bcolumn1">
-                    <form name="orderForm" id="form" onsubmit="return ValidateForm()" action="http://webdevfoundations.net/scripts/formdemo.asp" method="post">
+                    <form name="orderForm" id="form" onsubmit="return ValidateForm()" action="orderprocess.php" method="post">
 						<h1>Order Form<span id="required" style="display: none">&nbsp;*Please fill in the highlighted field</span></h1>
 						<label for="firstname">FIRST NAME</label>
 						<input type="text" name="firstname" id="firstname" >
@@ -168,8 +168,11 @@
 				</div>
 				<div class="bcolumn2">
                     <h2>HAVE A SPECIAL EVENT?</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.
-                         Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci. Aenean nec lorem.</p>
+                    <p>We love tackling new and exciting challenges to create the best creations that you desire. No matter how large or small
+					the request is, we want you to count on us for your event.</p>
+					<p>Please fill out the form with your contact details and 
+					your request. Include design details, catering location, and culinary preferences, is applicable. We look forward to 
+					helping you make your vision come true!</p>
 				<br>
 				</div>
 			</div>

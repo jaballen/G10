@@ -31,7 +31,8 @@
 		$count = $getarray['count'];
 		
 	//checks if they've redeemed already. if so, $count will be > 1. count initialized to 0 in database. 		
-	if ($count == 0) { 
+	if ($count == 0) 
+	{ 
 		$value = "SELECT value FROM receipts WHERE number = '$receipt'";			
 		$getvalue = mysql_query($value);
 		$valuearray = mysql_fetch_assoc($getvalue);

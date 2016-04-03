@@ -93,7 +93,7 @@
 					<a href="#" onClick="dv.showDV(img8); return false"><img src="Images/gallery8.png"
 					alt="Image 8">
 					<a href="#" onClick="dv.showDV(img9); return false"><img src="Images/gallery9.png"
-					alt="Image 9">
+					alt="Image 9"></a>
 					</div>
 				</div>
 			</div>

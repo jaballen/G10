@@ -31,7 +31,8 @@
 	$result = mysql_query($select);
 	$num_matches= mysql_num_rows($result);
 		
-	if ($num_matches == 1) {
+	if ($num_matches == 1) 
+	{
 		@mysql_query($delete);
 		unset($_SESSION['SESS_MEMBER_ID']);
 		unset($_SESSION['SESS_FIRST_NAME']);

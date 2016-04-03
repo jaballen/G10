@@ -70,7 +70,7 @@
 					<ul>
 						<li><p>Easy Breezy Cupcake</p>
 							<ul>
-								<li><p>Lemon cupcake, blue vanilla frosting, granulated brown sugar with umbrella and gummybears. </p></li>
+								<li><p>Lemon cupcake topped with blue vanilla frosting, granulated brown sugar, and graham cracker bears. </p></li>
 							</ul>
 						</li>
 						<li><p>Stairway to Heaven Cupcake</p>
@@ -91,17 +91,17 @@
 					<ul>
 						<li><p>Rainbow Cupcake</p>
 							<ul>
-								<li><p>Moist white cake with rainbow foodcoloring, topped with vanilla buttercream frosting and unicorn dust.</p></li>
+								<li><p>Moist white cake with rainbow swirl, topped with vanilla buttercream frosting and suspended gel candy.</p></li>
 							</ul>
 						</li>
 						<li><p>Red Velvet Cupcake </p>
 							<ul>
-								<li><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p></li>
+								<li><p>Traditional chocolate cupcake with chocolate filling, chocolate drizzle, and vanilla frosting.</p></li>
 							</ul>
 						</li>
 						<li><p>London Fog Cupcake</p>
 							<ul>
-								<li><p>Earl Grey infused vanilla cupcake with lavender frosting and tea leaves..</p></li>
+								<li><p>Traditional Earl Grey infused vanilla cupcake with lavender frosting and tea leaves.</p></li>
 							</ul>
 						</li>
 					</ul>
@@ -112,17 +112,17 @@
 					<ul>
 						<li><p>Shock and Awe Cupcake</p>
 							<ul>
-								<li><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p></li>
+								<li><p>Chocolate based cupcake with whipped topping and infused with either Kahlua or spiced rum.</p></li>
 							</ul>
 						</li>
 						<li><p>Sunny Cupcake</p>
 							<ul>
-								<li><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p></li>
+								<li><p>Your choice of chocolate or vanilla based cupcake with whipped frosting, and cookie sprinkles.</p></li>
 							</ul>
 						</li>
 						<li><p>Snowflake Cupcake</p>
 							<ul>
-								<li><p>Vanilla bean cupcake with vanilla icing, snowflake designed fondant covered in white sugar crystals..</p></li>
+								<li><p>Vanilla bean cupcake with vanilla icing, snowflake designed fondant covered in white sugar crystals.</p></li>
 							</ul>
 						</li>
 					</ul>
@@ -153,7 +153,7 @@
 
 			<!-- div footer -->
 			<div id="footer">
-				<p>© 2016 | Cupcakes on a Cloud | <a href="sitemap.php">Sitemap</a></p>
+				<p>© 2016 | Cupcakes on a Cloud | <a href="sitemap.html">Sitemap</a></p>
 				
 				<!-- div socialbuttons -->
 				<div class="socialbuttons">

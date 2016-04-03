@@ -14,7 +14,7 @@
 		die('Unable to select database');
 	}
 	
-	$points = "SELECT points FROM members WHERE email = '".$_SESSION['SESS_LOGIN']."'";
+	$points = "SELECT * FROM members WHERE email = '".$_SESSION['SESS_LOGIN']."'";
 	$getpoints = mysql_query($points);
 	$pointsarray = mysql_fetch_assoc($getpoints);	
 	
@@ -96,7 +96,7 @@
 						<br>
 						<input type="submit">
 					</form>
-				</div>
+				</div>	
 			</div>
 
 			<!-- div footer -->

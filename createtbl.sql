@@ -19,3 +19,18 @@ CREATE TABLE receipts (
 	value int(20) NOT NULL,
 	PRIMARY KEY (id)
 )
+
+CREATE TABLE orders (
+	id integer NOT NULL auto_increment,
+	firstname varchar(100) NOT NULL,
+	lastname varchar(100) NOT NULL,
+	email varchar(200) NOT NULL,
+	phone varchar(100) NOT NULL,
+	odate date(100) NOT NULL,
+	about varchar(30) NOT NULL,
+	details longtext(500) NOT NULL,
+	PRIMARY KEY (id)
+)
+	
+	
+	
