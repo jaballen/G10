@@ -93,7 +93,7 @@
 			<!-- div header -->
 			<div id="header">
 				<div class="headerimg">
-				<a href="index.html"><img src="Images/templogo.png"
+				<a href="index.php"><img src="Images/templogo.png"
 				alt="Cupcakes on a Cloud"></a>
 				</div>
 				<div class="address">
@@ -137,7 +137,7 @@
 				<h1>CUSTOM ORDERS</h1>
 				</div>
 				<div class="bcolumn1">
-                    <form name="orderForm" id="form" onsubmit="return ValidateForm()" action="orderprocess.php" method="post">
+                    <form name="orderForm" id="form" onsubmit="return ValidateForm()" action="formmail.php" method="post">
 						<h1>Order Form<span id="required" style="display: none">&nbsp;*Please fill in the highlighted field</span></h1>
 						<label for="firstname">FIRST NAME</label>
 						<input type="text" name="firstname" id="firstname" >
@@ -163,6 +163,9 @@
 						<br>
 						<textarea name="orderdesc" id="orderdesc"></textarea> 
 						<br>
+						<input type="hidden" name="recipients" value="cupcake@cupcakesonacloud.x10host.com" />
+						<input type="hidden" name="subject" value="Order form" />
+						<input type="hidden" name="good_url" value="order_thanks.php" />
 						<input id="mySubmit" type="submit" value="Submit">
                     </form>
 				</div>

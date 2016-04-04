@@ -122,7 +122,7 @@
 			<!-- div header -->
 			<div id="header">
 				<div class="headerimg">
-				<a href="index.html"><img src="Images/templogo.png"
+				<a href="index.php"><img src="Images/templogo.png"
 				alt="Cupcakes on a Cloud"></a>
 				</div>
 				<div class="address">

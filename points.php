@@ -38,7 +38,7 @@
 		$valuearray = mysql_fetch_assoc($getvalue);
 		$p = $valuearray['value'];
 		
-		$updaterec = "UPDATE receipts SET count=count+'1' WHERE number = '$receipt'";
+		$updaterec = "UPDATE receipts SET count=count+1 WHERE number = '$receipt'";
 		$update = mysql_query($updaterec);
 		@mysql_query($updaterec) or die('Unable to select update receipt');
 		

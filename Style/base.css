@@ -205,7 +205,7 @@ h2{
 }
 		
 #nav ul {
-	list-style: none;
+	list-style-type: none;
 	background-color: #DAFFEF;
 	text-align: center;
 	padding: 0;
@@ -215,14 +215,14 @@ h2{
 #nav li {
 	font-size: 1em;
 	line-height: 35px;
-	text-align: left;
+	text-align: center;
 }
 
 #nav a {
 	text-decoration: none;
 	color: #000;
 	display: block;
-	padding-left: 15px;
+	padding-left: 3px;
 	border-bottom: 1px solid #888;
 }
 
@@ -247,7 +247,7 @@ h2{
 	line-height: 50px;
 	font-size: 1em;
 	display: inline-block;
-	margin-right: -4px;
+	margin-right: -3px;
 	text-align: center;
 }
 
